@@ -3,4 +3,6 @@ pandas
 scikit-learn
 seaborn
 fastapi
+streamlit
+plotly
 -e .
