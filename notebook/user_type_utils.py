@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime
 
 
-class utils:
+class user_type_utils:
     def __init__(self, input_df):
         self.student_purchases = pd.read_csv('data/raw/365_student_purchases.csv')
         self.student_purchases.date_purchased = pd.to_datetime(self.student_purchases.date_purchased)
