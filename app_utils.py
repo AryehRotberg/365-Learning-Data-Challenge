@@ -19,14 +19,19 @@ class app_utils:
         return self.student_info_df.student_country.unique().tolist()
     
     def modify_options(self, df):
+        subscription_type_option = ''
+
         if self.user_type_option == 'Free':
-            user_type_option = 'Free'
+            user_type_option = False
             subscription_type_option = df['purchase_type']
-        
+
         else:
             user_type_option = self.user_type_option
             subscription_type_option = self.subscription_type_option
             country_option = self.country_option
+        
+        if self.user_type_option == 'Paid':
+            user_type_option = True
         
         if self.user_type_option == 'All':
             user_type_option = df['paid']
@@ -71,3 +76,17 @@ class app_utils:
         country_minutes_watched = country_minutes_watched[['student_country', 'minutes_watched']].groupby('student_country').sum().reset_index().sort_values(by='minutes_watched', ascending=False)
 
         return country_minutes_watched
+    
+    def get_monthly_average_minutes_watched(self):
+        monthly_average_minutes_watched = pd.merge(self.merged_student_info_purchase, self.student_learning_df, on='student_id', how='left')
+
+        user_type_option, subscription_type_option, country_option = self.modify_options(monthly_average_minutes_watched)
+        monthly_average_minutes_watched = monthly_average_minutes_watched[(monthly_average_minutes_watched.paid == user_type_option)
+                                                                          & (monthly_average_minutes_watched.purchase_type == subscription_type_option)
+                                                                          & (monthly_average_minutes_watched.student_country == country_option)]
+
+        monthly_average_minutes_watched['month'] = monthly_average_minutes_watched.date_watched.apply(lambda date : date.month)
+        monthly_average_minutes_watched['average_minutes_watched'] = monthly_average_minutes_watched.minutes_watched
+        monthly_average_minutes_watched = monthly_average_minutes_watched[['month', 'minutes_watched', 'average_minutes_watched']].groupby('month').agg({'minutes_watched': 'sum', 'average_minutes_watched': 'mean'}).reset_index().round(2)
+
+        return monthly_average_minutes_watched

@@ -38,9 +38,11 @@ st.write(course_minutes_watched.head())
 
 student_country = app_utils(user_type_option, subscription_type_option, country_option).get_student_country()
 platform = app_utils(user_type_option, subscription_type_option, country_option).get_platform_minutes_watched()
+monthly_average_minutes_watched = app_utils(user_type_option, subscription_type_option, country_option).get_monthly_average_minutes_watched()
 
 st.write(px.bar(student_country.head(), x='students', y='student_country', orientation='h', color='student_country', title='Top 5 Largest Number of Users'))
 st.write(px.bar(platform.head(), x='minutes_watched', y='student_country', orientation='h', color='student_country', title='Minutes watched on the platform by users'))
+st.write(px.bar(monthly_average_minutes_watched, x='month', y='average_minutes_watched'))
 
 # st.write('')
 # fig = px.line(monthly_average_minutes_watched, x='month', y='average_minutes_watched')
