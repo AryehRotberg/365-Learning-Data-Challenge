@@ -14,6 +14,7 @@ class app_utils:
 
         self.student_learning_df.date_watched = pd.to_datetime(self.student_learning_df.date_watched)
         self.course_ratings_df.date_rated = pd.to_datetime(self.course_ratings_df.date_rated)
+        self.merged_student_info_purchase.date_registered = pd.to_datetime(self.merged_student_info_purchase.date_registered)
     
     def get_country_list(self):
         return self.student_info_df.student_country.unique().tolist()
