@@ -19,8 +19,6 @@ class app_utils:
         return self.student_info_df.student_country.unique().tolist()
     
     def modify_options(self, df):
-        subscription_type_option = ''
-
         if self.user_type_option == 'Free':
             user_type_option = False
             subscription_type_option = df['purchase_type']
