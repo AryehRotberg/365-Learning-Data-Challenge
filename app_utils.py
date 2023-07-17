@@ -6,14 +6,17 @@ class app_utils:
         self.subscription_type_option = subscription_type_option
         self.country_option = country_option
 
+        self.student_info_df = pd.read_csv('notebook/data/raw/365_student_info.csv')
         self.merged_student_info_purchase = pd.read_csv('notebook/data/processed/merged_student_info_purchase.csv')
-        self.student_learning_df = pd.read_csv('data/raw/365_student_learning.csv')
-        self.course_info_df = pd.read_csv('data/raw/365_course_info.csv')
-        self.course_ratings_df = pd.read_csv('data/raw/365_course_ratings.csv')
-        self.merged_student_info_purchase = pd.read_csv('notebook/data/processed/merged_student_info_purchase.csv')
+        self.student_learning_df = pd.read_csv('notebook/data/raw/365_student_learning.csv')
+        self.course_info_df = pd.read_csv('notebook/data/raw/365_course_info.csv')
+        self.course_ratings_df = pd.read_csv('notebook/data/raw/365_course_ratings.csv')
 
         self.student_learning_df.date_watched = pd.to_datetime(self.student_learning_df.date_watched)
         self.course_ratings_df.date_rated = pd.to_datetime(self.course_ratings_df.date_rated)
+    
+    def get_country_list(self):
+        return self.student_info_df.student_country.unique().tolist()
     
     def modify_options(self, df):
         if self.user_type_option == 'Free':
@@ -55,4 +58,16 @@ class app_utils:
 
         return course_minutes_watched
     
+    def get_platform_minutes_watched(self):
+        self.student_country = self.get_student_country()
 
+        country_minutes_watched = pd.merge(self.merged_student_info_purchase, self.student_learning_df[['student_id', 'minutes_watched']], on='student_id', how='left')
+
+        user_type_option, subscription_type_option, country_option = self.modify_options(country_minutes_watched)
+        country_minutes_watched = country_minutes_watched[(country_minutes_watched.paid == user_type_option)
+                                                 & (country_minutes_watched.purchase_type == subscription_type_option)
+                                                 & (country_minutes_watched.student_country == country_option)]
+
+        country_minutes_watched = country_minutes_watched[['student_country', 'minutes_watched']].groupby('student_country').sum().reset_index().sort_values(by='minutes_watched', ascending=False)
+
+        return country_minutes_watched
