@@ -41,13 +41,13 @@ col4_kpi.metric('Onboarded from Registered', value=f'{utils.get_onboarded_from_r
 
 st.write('')
 col1_chart, col2_chart = st.columns(2, gap='large')
-col1_chart.write(px.bar(student_country.head(), x='students', y='student_country', orientation='h', color='student_country', title='Chart 1.1 - Top 5 Largest Number of Users'))
-col2_chart.write(px.bar(platform.head(), x='minutes_watched', y='student_country', orientation='h', color='student_country', title='Chart 1.2 - Minutes watched on the platform by users'))
+col1_chart.write(px.bar(student_country.head(), x='students', y='student_country', orientation='h', color='student_country', title='Top 5 Largest Number of Users'))
+col2_chart.write(px.bar(platform.head(), x='minutes_watched', y='student_country', orientation='h', color='student_country', title='Minutes watched on the platform by users'))
 
 col3_chart, col4_chart = st.columns(2, gap='large')
 col3_chart.write(go.Figure(data=[go.Bar(name='Minutes Watched', x=monthly_average_minutes_watched.month, y=monthly_average_minutes_watched.minutes_watched, offsetgroup=1),
                                  go.Line(name='Average Minutes Watched', x=monthly_average_minutes_watched.month, y=monthly_average_minutes_watched.average_minutes_watched, offsetgroup=2)])
-                                 .update_layout(title='Chart 1.3 - Minutes Watched by Month'))
+                                 .update_layout(title='Minutes Watched by Month'))
 col4_chart.write(go.Figure(data=[go.Bar(name='Students', x=students_registered_onboarded.month, y=students_registered_onboarded.students, offsetgroup=1),
                                  go.Bar(name='Onboarded', x=students_registered_onboarded.month, y=students_registered_onboarded.onboarded, offsetgroup=2)])
-                                 .update_layout(title='Chart 1.4 - Number of Registered Students Compared to Onboarded'))
+                                 .update_layout(title='Number of Registered Students Compared to Onboarded'))
