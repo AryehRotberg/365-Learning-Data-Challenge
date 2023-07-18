@@ -11,11 +11,13 @@ class app_utils:
         self.course_info_df = pd.read_csv('notebook/data/raw/365_course_info.csv')
         self.course_ratings_df = pd.read_csv('notebook/data/raw/365_course_ratings.csv')
         self.student_engagement_df = pd.read_csv('notebook/data/raw/365_student_engagement.csv')
+        self.student_purchases_df = pd.read_csv('data/raw/365_student_purchases.csv')
         self.merged_student_info_purchase = pd.read_csv('notebook/data/processed/merged_student_info_purchase.csv')
 
         self.student_learning_df.date_watched = pd.to_datetime(self.student_learning_df.date_watched)
         self.course_ratings_df.date_rated = pd.to_datetime(self.course_ratings_df.date_rated)
         self.student_engagement_df.date_engaged = pd.to_datetime(self.student_engagement_df.date_engaged)
+        self.student_purchases_df.date_purchased = pd.to_datetime(self.student_purchases_df.date_purchased)
         self.merged_student_info_purchase.date_registered = pd.to_datetime(self.merged_student_info_purchase.date_registered)
 
     
@@ -129,6 +131,9 @@ class app_utils:
     
     def get_minutes_watched_kpi(self):
         return self.student_learning_df.minutes_watched.sum().round()
+    
+    def get_purchases_kpi(self):
+        return self.student_purchases_df.purchase_id.nunique()
     
     def get_average_minutes_watched_kpi(self):
         return (self.get_minutes_watched_kpi() / self.student_learning_df.student_id.nunique()).round()
