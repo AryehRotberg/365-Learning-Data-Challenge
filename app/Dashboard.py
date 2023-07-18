@@ -18,7 +18,7 @@ user_type_option = st.sidebar.selectbox('Select User Type', ('All', 'Free', 'Pai
 subscription_type_option = st.sidebar.selectbox('Select User Subscription Type', ('All', 'Monthly', 'Quarterly', 'Annual'))
 
 countries_list = ['All']
-countries_list.extend(pd.read_csv('notebook/data/raw/365_student_info.csv').student_country.unique().tolist())
+countries_list.extend(pd.read_csv('data/raw/365_student_info.csv').student_country.unique().tolist())
 
 country_option = st.sidebar.selectbox('Select Country', countries_list)
 
