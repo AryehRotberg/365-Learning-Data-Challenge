@@ -30,6 +30,7 @@ platform = utils.get_platform_minutes_watched()
 monthly_average_minutes_watched = utils.get_monthly_average_minutes_watched()
 students_registered_onboarded = utils.get_students_registered_onboarded()
 
+st.write('')
 st.write(course_minutes_watched.head())
 st.write('')
 
