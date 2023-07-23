@@ -20,6 +20,8 @@ class app_utils:
         self.student_purchases_df.date_purchased = pd.to_datetime(self.student_purchases_df.date_purchased)
         self.merged_student_info_purchase.date_registered = pd.to_datetime(self.merged_student_info_purchase.date_registered)
 
+        self.month_names_dict = {1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June', 7: 'July', 8: 'August', 9: 'September', 10: 'October'}
+
     
     def get_country_list(self):
         return self.student_info_df.student_country.unique().tolist()
@@ -93,6 +95,7 @@ class app_utils:
         monthly_average_minutes_watched['month'] = monthly_average_minutes_watched.date_watched.apply(lambda date : date.month)
         monthly_average_minutes_watched['average_minutes_watched'] = monthly_average_minutes_watched.minutes_watched
         monthly_average_minutes_watched = monthly_average_minutes_watched[['month', 'minutes_watched', 'average_minutes_watched']].groupby('month').agg({'minutes_watched': 'sum', 'average_minutes_watched': 'mean'}).reset_index().round(2)
+        monthly_average_minutes_watched.month = monthly_average_minutes_watched.month.map(self.month_names_dict)
 
         return monthly_average_minutes_watched
     
@@ -123,6 +126,7 @@ class app_utils:
         monthly_onboarded_students = monthly_onboarded_students.rename(columns={0: 'onboarded'})
 
         students_registered_onboarded = pd.merge(monthly_registered_students, monthly_onboarded_students, on='month')
+        students_registered_onboarded.month = students_registered_onboarded.month.map(self.month_names_dict)
 
         return students_registered_onboarded
     

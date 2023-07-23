@@ -42,8 +42,10 @@ col4_kpi.metric('Onboarded from Registered', value=f'{utils.get_onboarded_from_r
 
 st.write('')
 col1_chart, col2_chart = st.columns(2, gap='large')
-col1_chart.write(px.bar(student_country.head(), x='students', y='student_country', orientation='h', color='student_country', title='Top 5 Largest Number of Users'))
-col2_chart.write(px.bar(platform.head(), x='minutes_watched', y='student_country', orientation='h', color='student_country', title='Minutes watched on the platform by users'))
+col1_chart.write(px.bar(student_country.head(), x='students', y='student_country', orientation='h', color='student_country', title='Top 5 Largest Number of Users',
+                        labels={'students': 'Students', 'student_country': 'Student Country'}))
+col2_chart.write(px.bar(platform.head(), x='minutes_watched', y='student_country', orientation='h', color='student_country', title='Minutes watched on the platform by users',
+                        labels={'minutes_watched': 'Minutes Watched', 'student_country': 'Student Country'}))
 
 col3_chart, col4_chart = st.columns(2, gap='large')
 col3_chart.write(go.Figure(data=[go.Bar(name='Minutes Watched', x=monthly_average_minutes_watched.month, y=monthly_average_minutes_watched.minutes_watched, offsetgroup=1),
