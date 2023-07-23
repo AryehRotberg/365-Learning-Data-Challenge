@@ -35,7 +35,7 @@ st.write(course_minutes_watched.head())
 st.write('')
 
 col1_kpi, col2_kpi, col3_kpi, col4_kpi = st.columns(4)
-col1_kpi.metric('Registered Students', value=utils.get_registered_students_kpi(), )
+col1_kpi.metric('Registered Students', value=utils.get_registered_students_kpi())
 col2_kpi.metric('Purchases', value=utils.get_purchases_kpi())
 col3_kpi.metric('Average Minutes Watched', value=utils.get_average_minutes_watched_kpi())
 col4_kpi.metric('Onboarded from Registered', value=f'{utils.get_onboarded_from_registered_kpi()}%')
