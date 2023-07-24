@@ -17,7 +17,7 @@ def get_requirements(file_path: str) -> list:
 
 
 setup(
-    name='ML Project Test',
+    name='365 Learning Data Challenge',
     version='0.0.1',
     author='Aryeh Rotberg',
     author_email='aryeh.rotberg@gmail.com',
