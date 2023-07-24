@@ -42,15 +42,15 @@ col4_kpi.metric('Onboarded from Registered', value=f'{utils.get_onboarded_from_r
 
 st.write('')
 col1_chart, col2_chart = st.columns(2, gap='large')
-col1_chart.write(px.bar(student_country.head(), x='students', y='student_country', orientation='h', color='student_country', title='Top 5 Largest Number of Users',
-                        labels={'students': 'Students', 'student_country': 'Student Country'}))
-col2_chart.write(px.bar(platform.head(), x='minutes_watched', y='student_country', orientation='h', color='student_country', title='Minutes watched on the platform by users',
-                        labels={'minutes_watched': 'Minutes Watched', 'student_country': 'Student Country'}))
+col1_chart.plotly_chart(px.bar(student_country.head(), x='students', y='student_country', orientation='h', color='student_country', title='Top 5 Largest Number of Users',
+                        labels={'students': 'Students', 'student_country': 'Student Country'}), use_container_width=True)
+col2_chart.plotly_chart(px.bar(platform.head(), x='minutes_watched', y='student_country', orientation='h', color='student_country', title='Minutes watched on the platform by users',
+                        labels={'minutes_watched': 'Minutes Watched', 'student_country': 'Student Country'}), use_container_width=True)
 
 col3_chart, col4_chart = st.columns(2, gap='large')
-col3_chart.write(go.Figure(data=[go.Bar(name='Minutes Watched', x=monthly_average_minutes_watched.month, y=monthly_average_minutes_watched.minutes_watched, offsetgroup=1),
+col3_chart.plotly_chart(go.Figure(data=[go.Bar(name='Minutes Watched', x=monthly_average_minutes_watched.month, y=monthly_average_minutes_watched.minutes_watched, offsetgroup=1),
                                  go.Line(name='Average Minutes Watched', x=monthly_average_minutes_watched.month, y=monthly_average_minutes_watched.average_minutes_watched, offsetgroup=2)])
-                                 .update_layout(title='Minutes Watched by Month'))
-col4_chart.write(go.Figure(data=[go.Bar(name='Students', x=students_registered_onboarded.month, y=students_registered_onboarded.students, offsetgroup=1),
+                                 .update_layout(title='Minutes Watched by Month'), use_container_width=True)
+col4_chart.plotly_chart(go.Figure(data=[go.Bar(name='Students', x=students_registered_onboarded.month, y=students_registered_onboarded.students, offsetgroup=1),
                                  go.Bar(name='Onboarded', x=students_registered_onboarded.month, y=students_registered_onboarded.onboarded, offsetgroup=2)])
-                                 .update_layout(title='Number of Registered Students Compared to Onboarded'))
+                                 .update_layout(title='Number of Registered Students Compared to Onboarded'), use_container_width=True)
