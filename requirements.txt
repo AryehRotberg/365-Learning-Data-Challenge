@@ -6,4 +6,5 @@ fastapi
 streamlit
 plotly
 imblearn
+xgboost
 -e .
