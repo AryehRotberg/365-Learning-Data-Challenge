@@ -7,4 +7,5 @@ streamlit
 plotly
 imblearn
 xgboost
+mlflow
 -e .
