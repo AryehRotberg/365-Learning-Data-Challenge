@@ -1,9 +1,6 @@
 import numpy as np
 import pandas as pd
 
-import pickle
-import json
-
 import mlflow
 
 from xgboost import XGBClassifier
@@ -33,45 +30,15 @@ class ModelTrainer:
         self.config = ModelTrainerConfig()
     
     def get_gridsearch_dict(self):
-        # self.grid_search = {
-        #     'logistic_regression': {
-        #         'classifier': LogisticRegression(), 'params': {
-        #             'C': np.logspace(-4, 4, 20),
-        #             'penalty': ['l1', 'l2'],
-        #             'solver': ['newton-cg', 'lbfgs', 'liblinear']
-        #         }
-        #     },
-
-        #     'rfc': {
-        #         'classifier': RandomForestClassifier(), 'params': {
-        #             'bootstrap': [True, False],
-        #             'max_depth': [1, 5, 10, 20, 30, None],
-        #             'max_features': ['log2', 'sqrt'],
-        #             'min_samples_split': [2, 5, 10],
-        #             'n_estimators': [1, 5, 10, 20, 30]
-        #         }
-        #     },
-
-        #     'xgb_classifier': {
-        #         'classifier': XGBClassifier(), 'params': {
-        #             'min_child_weight': [1, 5, 10],
-        #             'gamma': [0.5, 1, 1.5, 2, 5],
-        #             'subsample': [0.6, 0.8, 1.0],
-        #             'colsample_bytree': [0.6, 0.8, 1.0],
-        #             'max_depth': [3, 4, 5]
-        #         }
-        #     },
-
-        #     'knn': {
-        #         'classifier': KNeighborsClassifier(), 'params': {
-        #             'n_neighbors': [5, 7, 9, 11, 13, 15],
-        #             'weights' : ['uniform','distance'],
-        #             'metric' : ['minkowski','euclidean','manhattan']
-        #         }
-        #     }
-        # }
-
         self.grid_search = {
+            'logistic_regression': {
+                'classifier': LogisticRegression(), 'params': {
+                    'C': np.logspace(-4, 4, 20),
+                    'penalty': ['l1', 'l2'],
+                    'solver': ['newton-cg', 'lbfgs', 'liblinear']
+                }
+            },
+
             'rfc': {
                 'classifier': RandomForestClassifier(), 'params': {
                     'bootstrap': [True, False],
@@ -80,9 +47,27 @@ class ModelTrainer:
                     'min_samples_split': [2, 5, 10],
                     'n_estimators': [1, 5, 10, 20, 30]
                 }
+            },
+
+            'xgb_classifier': {
+                'classifier': XGBClassifier(), 'params': {
+                    'min_child_weight': [1, 5, 10],
+                    'gamma': [0.5, 1, 1.5, 2, 5],
+                    'subsample': [0.6, 0.8, 1.0],
+                    'colsample_bytree': [0.6, 0.8, 1.0],
+                    'max_depth': [3, 4, 5]
+                }
+            },
+
+            'knn': {
+                'classifier': KNeighborsClassifier(), 'params': {
+                    'n_neighbors': [5, 7, 9, 11, 13, 15],
+                    'weights' : ['uniform','distance'],
+                    'metric' : ['minkowski','euclidean','manhattan']
+                }
             }
         }
-
+        
         return self.grid_search
     
     def get_tuned_models_scores(self, grid_search: dict, verbose=False):
