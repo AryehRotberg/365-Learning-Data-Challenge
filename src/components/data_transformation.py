@@ -31,8 +31,6 @@ class DataTransformation:
 
         X_scaled = self.scaler.fit_transform(X_resampled)
 
-        print(y_resampled.value_counts())
-
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X_scaled, y_resampled, test_size=0.2)
     
     def to_csv(self):
