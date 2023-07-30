@@ -12,9 +12,13 @@ from sklearn.neighbors import KNeighborsClassifier
 
 from sklearn.model_selection import GridSearchCV
 
-from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score, f1_score
+from sklearn.metrics import classification_report, roc_auc_score, f1_score
 
 from dataclasses import dataclass
+
+
+# from sklearn.metrics import RocCurveDisplay
+# RocCurveDisplay.from_estimator(classifier, X_test, y_test)
 
 
 @dataclass
@@ -65,6 +69,20 @@ class ModelTrainer:
                     'weights' : ['uniform','distance'],
                     'metric' : ['minkowski','euclidean','manhattan']
                 }
+            },
+
+            'gradient_boosting': {
+                'classifier': GradientBoostingClassifier(), 'params': {
+                    "loss": ["deviance"],
+                    "learning_rate": [0.01, 0.025, 0.05, 0.075, 0.1, 0.15, 0.2],
+                    "min_samples_split": np.linspace(0.1, 0.5, 12),
+                    "min_samples_leaf": np.linspace(0.1, 0.5, 12),
+                    "max_depth": [3,5,8],
+                    "max_features": ["log2","sqrt"],
+                    "criterion": ["friedman_mse",  "mae"],
+                    "subsample": [0.5, 0.618, 0.8, 0.85, 0.9, 0.95, 1.0],
+                    "n_estimators": [10]
+                }
             }
         }
         
@@ -105,7 +123,7 @@ class ModelTrainer:
         y_pred = classifier.predict(self.config.X_test)
 
         report = pd.DataFrame(classification_report(self.config.y_test, y_pred, output_dict=True)).transpose()
-        report.to_csv('data/processed/RandomForestClassifier_report.csv', index=False)
+        report.to_csv('data/processed/best_classifier_report.csv', index=False)
 
         mlflow.set_experiment('365 Learning Data Challenge - Machine Learning')
 
@@ -113,19 +131,9 @@ class ModelTrainer:
             for param_type, value in params.items():
                 mlflow.log_param(param_type, value)
             
-            mlflow.log_artifact('data/processed/RandomForestClassifier_report.csv')
+            mlflow.log_artifact('data/processed/best_classifier_report.csv')
 
             mlflow.log_metric('f1_score', f1_score(self.config.y_test, y_pred))
             mlflow.log_metric('roc_auc_score', roc_auc_score(self.config.y_test, y_pred))
 
-            mlflow.sklearn.log_model(classifier, 'RandomForestClassifier', registered_model_name='RandomForestClassifier')
-
-
-if __name__ == '__main__':
-    model_trainer = ModelTrainer()
-
-    grid_search = model_trainer.get_gridsearch_dict()
-    scores = model_trainer.get_tuned_models_scores(grid_search, verbose=True)
-    classifier, params = model_trainer.get_best_classifier(scores)
-
-    model_trainer.save_best_classifier(classifier, params)
+            mlflow.sklearn.log_model(classifier, 'Best_Classifier', registered_model_name=type(classifier).__name__)
