@@ -1,6 +1,10 @@
 import pandas as pd
 
-class app_utils:
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+class main_dashboard_utils:
     def __init__(self, user_type_option: str, subscription_type_option: str, country_option: str):
         self.user_type_option = user_type_option
         self.subscription_type_option = subscription_type_option
@@ -92,7 +96,7 @@ class app_utils:
                                                                           & (monthly_average_minutes_watched.purchase_type == subscription_type_option)
                                                                           & (monthly_average_minutes_watched.student_country == country_option)]
 
-        monthly_average_minutes_watched['month'] = monthly_average_minutes_watched.date_watched.apply(lambda date : date.month)
+        monthly_average_minutes_watched['month'] = monthly_average_minutes_watched.date_watched.dt.month
         monthly_average_minutes_watched['average_minutes_watched'] = monthly_average_minutes_watched.minutes_watched
         monthly_average_minutes_watched = monthly_average_minutes_watched[['month', 'minutes_watched', 'average_minutes_watched']].groupby('month').agg({'minutes_watched': 'sum', 'average_minutes_watched': 'mean'}).reset_index().round(2)
         monthly_average_minutes_watched.month = monthly_average_minutes_watched.month.map(self.month_names_dict)
@@ -112,7 +116,7 @@ class app_utils:
                                                                   & (monthly_registered_students.purchase_type == subscription_type_option)
                                                                   & (monthly_registered_students.student_country == country_option)]
 
-        monthly_registered_students['month'] = monthly_registered_students.date_registered.apply(lambda date : date.month)
+        monthly_registered_students['month'] = monthly_registered_students.date_registered.dt.month
         monthly_registered_students = monthly_registered_students[['month']].groupby(['month']).size().reset_index()
         monthly_registered_students = monthly_registered_students.rename(columns={0: 'students'})
 
@@ -121,7 +125,7 @@ class app_utils:
                                                                   & (monthly_onboarded_students.purchase_type == subscription_type_option)
                                                                   & (monthly_onboarded_students.student_country == country_option)]
 
-        monthly_onboarded_students['month'] = monthly_onboarded_students.date_engaged.apply(lambda date : date.month)
+        monthly_onboarded_students['month'] = monthly_onboarded_students.date_engaged.dt.month
         monthly_onboarded_students = monthly_onboarded_students[['month']].groupby(['month']).size().reset_index()
         monthly_onboarded_students = monthly_onboarded_students.rename(columns={0: 'onboarded'})
 
@@ -129,6 +133,38 @@ class app_utils:
         students_registered_onboarded.month = students_registered_onboarded.month.map(self.month_names_dict)
 
         return students_registered_onboarded
+    
+    def plot_top_largest_number_of_users(self):
+        student_country = self.get_student_country()
+        return px.bar(student_country.head(), x='students', y='student_country', orientation='h', color='student_country', title='Top 5 Largest Number of Users',
+                        labels={'students': 'Students', 'student_country': 'Student Country'}, color_discrete_sequence=px.colors.qualitative.Prism)
+    
+    def plot_minutes_watched_by_country(self):
+        platform_minutes_watched = self.get_platform_minutes_watched()
+        return px.bar(platform_minutes_watched.head(), x='minutes_watched', y='student_country', orientation='h', color='student_country', title='Minutes watched on the platform by users',
+                        labels={'minutes_watched': 'Minutes Watched', 'student_country': 'Student Country'}, color_discrete_sequence=px.colors.qualitative.Prism)
+    
+    def plot_minutes_watched_by_month(self):
+        monthly_average_minutes_watched = self.get_monthly_average_minutes_watched()
+
+        fig = make_subplots(specs=[[{"secondary_y": True}]])
+        fig.add_trace(go.Bar(x=monthly_average_minutes_watched.month, y=monthly_average_minutes_watched.minutes_watched, name='Minutes Watched', offsetgroup=1), secondary_y=False)
+        fig.add_trace(go.Scatter(x=monthly_average_minutes_watched.month, y=monthly_average_minutes_watched.average_minutes_watched, name='Average Minutes Watched', offsetgroup=2), secondary_y=True)
+
+        fig.update_xaxes(title_text='Month')
+        fig.update_yaxes(title_text='Minutes Watched', secondary_y=False)
+        fig.update_yaxes(title_text='Average Minutes Watched', secondary_y=True)
+        fig.update_layout(title='Minutes Watched by Month')
+
+        return fig
+    
+    def plot_registered_onboarded(self):
+        students_registered_onboarded = self.get_students_registered_onboarded()
+
+        return go.Figure(data=[
+             go.Bar(name='Students', x=students_registered_onboarded.month, y=students_registered_onboarded.students, offsetgroup=1),
+             go.Bar(name='Onboarded', x=students_registered_onboarded.month, y=students_registered_onboarded.onboarded, offsetgroup=2)]).update_layout(
+            title='Number of Registered Students Compared to Onboarded')
     
     def get_registered_students_kpi(self):
         return self.student_info_df.student_id.nunique()
