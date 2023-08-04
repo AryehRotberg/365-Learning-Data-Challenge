@@ -8,4 +8,6 @@ plotly
 imblearn
 xgboost
 mlflow
+nbformat
+pydantic==1.9.2
 -e .
