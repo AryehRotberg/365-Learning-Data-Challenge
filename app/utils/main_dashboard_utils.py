@@ -4,8 +4,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-from operator import itemgetter
-
 
 class main_dashboard_utils:
     def __init__(self, user_type_option: str, subscription_type_option: str, country_option: str):
