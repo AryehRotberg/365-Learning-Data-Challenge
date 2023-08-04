@@ -9,22 +9,16 @@ class additional_insights_utils:
     def __init__(self):
         self.student_info_df = pd.read_csv('data/raw/365_student_info.csv')
         self.student_learning_df = pd.read_csv('data/raw/365_student_learning.csv')
-        self.course_info_df = pd.read_csv('data/raw/365_course_info.csv')
-        self.course_ratings_df = pd.read_csv('data/raw/365_course_ratings.csv')
         self.student_engagement_df = pd.read_csv('data/raw/365_student_engagement.csv')
         self.student_purchases_df = pd.read_csv('data/raw/365_student_purchases.csv')
         self.exam_info_df = pd.read_csv('data/raw/365_exam_info.csv')
         self.quiz_info_df = pd.read_csv('data/raw/365_quiz_info.csv')
         self.hub_questions_df = pd.read_csv('data/raw/365_student_hub_questions.csv')
-        self.merged_student_info_purchase = pd.read_csv('data/processed/merged_student_info_purchase.csv')
 
         self.student_learning_df.date_watched = pd.to_datetime(self.student_learning_df.date_watched)
-        self.course_ratings_df.date_rated = pd.to_datetime(self.course_ratings_df.date_rated)
         self.student_engagement_df.date_engaged = pd.to_datetime(self.student_engagement_df.date_engaged)
         self.student_purchases_df.date_purchased = pd.to_datetime(self.student_purchases_df.date_purchased)
-        self.merged_student_info_purchase.date_registered = pd.to_datetime(self.merged_student_info_purchase.date_registered)
         self.hub_questions_df.date_question_asked = pd.to_datetime(self.hub_questions_df.date_question_asked)
-
 
         self.month_names_dict = {1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June', 7: 'July', 8: 'August', 9: 'September', 10: 'October'}
     
@@ -60,15 +54,20 @@ class additional_insights_utils:
 
         fig.update_yaxes(title_text='Amount of Purchases', secondary_y=False)
         fig.update_yaxes(title_text='Onboarded', secondary_y=True)
+        fig.update_layout(title='Amount of Purchases by Month')
 
         return fig
     
     def get_student_and_purchase_type(self):
+        colors = ['lightslategray'] * 3
+        colors[0] = 'orange'
+
         plot = px.histogram(data_frame=self.student_purchases_df,
                             x='purchase_type',
                             color='purchase_type',
                             labels={'purchase_type': 'Purchase Type'},
-                            color_discrete_sequence=px.colors.qualitative.Vivid)
+                            color_discrete_sequence=colors,
+                            title='Amount of Purchases Based on Purchase Type')
         plot.update_layout(yaxis_title='Purchases')
 
         return plot
@@ -84,7 +83,8 @@ class additional_insights_utils:
                       y='engaged',
                       color='student_country',
                       labels={'student_country': 'Student Country'},
-                      color_discrete_sequence=px.colors.qualitative.G10_r)
+                      color_discrete_sequence=px.colors.qualitative.Prism,
+                      title='Engaged Students Based on Country')
         plot.update_layout(yaxis_title='Engaged')
 
         return plot
@@ -94,15 +94,20 @@ class additional_insights_utils:
 
         questions_per_month['month'] = questions_per_month.date_question_asked.dt.month
         questions_per_month = questions_per_month[['month', 'hub_question_id']].groupby('month').size().reset_index()
-        questions_per_month = questions_per_month.rename(columns={0: 'Questions'})
+        questions_per_month = questions_per_month.rename(columns={0: 'questions'})
         questions_per_month.month = questions_per_month.month.map(self.month_names_dict)
+        
+        colors = ['lightslategray'] * 10
+        colors[7] = 'orange'
 
         # Plot
         plot = px.bar(data_frame=questions_per_month,
                       x='month',
-                      y='Questions',
+                      y='questions',
                       color='month',
-                      color_discrete_sequence=px.colors.qualitative.Vivid)
+                      color_discrete_sequence=colors,
+                      labels={'month': 'Month', 'questions': 'Questions'},
+                      title='Questions Asked Based on Month')
         
         return plot
     

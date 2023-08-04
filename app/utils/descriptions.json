@@ -1,3 +1,16 @@
-{"main_chart_1": "This chart represents the top 5 largest number of users per country. The country with most amount of users is India with almost 7000 students.",
-"main_chart_2": "This chart represents minutes watched on the platform per country. Students from the US have watched almost 500 thousand minutes in total.",
-"main_chart_3": "This chart represents the distribution of minutes watched on the platform by month from January to October in the year 2022. In August the amount of minutes watched was the highest with the total of almost 323 thousand minutes."}
+{
+    "main_dashboard_description": "**The following dashboard showcases insights from graphs and KPIs based on the 365 Data Science database published on https://365datascience.com/news/365-learning-data-challenge/ based on the year 2022 from January to October.**",
+    "additional_insights_description": "**The following dashboard showcases additional insights from more graphs and KPIs based on the 365 Data Science database published on https://365datascience.com/news/365-learning-data-challenge/ based on the year 2022 from January to October.**",
+
+    "main_chart_1": "This chart represents the top 5 countries with the most amount of students based on the year 2022. The country with the most users is India, with almost 7000 students.",
+    "main_chart_2": "This chart represents minutes watched on the platform per country. Students from the US have watched almost 500 thousand minutes in total.",
+    "main_chart_3": "This chart represents the distribution of minutes watched on the platform by month from January to October. The platform was most active during August, with almost 323 thousand minutes.",
+    "main_chart_4": "This chart represents the number of registered students compared to onboarded students. An onboarded student is a user who has done at least one of the following: Watched a video, solved a quiz, or attempted an exam. August was the month with the most amount of students and onboarded students.",
+
+    "additional_insights_chart_1": "This chart represents the distribution of minutes watched on the platform by month from January to October in the year 2022. In August the amount of minutes watched was the highest with the total of almost 323 thousand minutes.",
+    "additional_insights_chart_2": "This chart represents the distribution of minutes watched on the platform by month from January to October in the year 2022. In August the amount of minutes watched was the highest with the total of almost 323 thousand minutes.",
+    "additional_insights_chart_3": "This chart represents the distribution of minutes watched on the platform by month from January to October in the year 2022. In August the amount of minutes watched was the highest with the total of almost 323 thousand minutes.",
+    "additional_insights_chart_4": "This chart represents the distribution of minutes watched on the platform by month from January to October in the year 2022. In August the amount of minutes watched was the highest with the total of almost 323 thousand minutes.",
+
+    "main_dashboard_summary": "Based on **Minutes Watched by Month** and **Number of Registered Students Compared to Onboarded**, July to September were the most active months. Summer break allows students to focus on skill enhancement or learning new subjects they may not have time for during the regular academic year. India and the US are the countries with the most amount of students. India has the most amount of students, yet the US has the most amount of onboarded students."
+}

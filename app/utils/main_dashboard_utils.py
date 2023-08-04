@@ -4,6 +4,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
+from operator import itemgetter
+
+
 class main_dashboard_utils:
     def __init__(self, user_type_option: str, subscription_type_option: str, country_option: str):
         self.user_type_option = user_type_option
@@ -25,6 +28,7 @@ class main_dashboard_utils:
         self.merged_student_info_purchase.date_registered = pd.to_datetime(self.merged_student_info_purchase.date_registered)
 
         self.month_names_dict = {1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June', 7: 'July', 8: 'August', 9: 'September', 10: 'October'}
+        self.countries_color_dict = dict(zip(self.get_student_country().student_country, px.colors.qualitative.Prism))
 
     
     def get_country_list(self):
@@ -75,7 +79,7 @@ class main_dashboard_utils:
         return course_minutes_watched
     
     def get_platform_minutes_watched(self):
-        self.student_country = self.get_student_country()
+        # self.student_country = self.get_student_country()
 
         country_minutes_watched = pd.merge(self.merged_student_info_purchase, self.student_learning_df[['student_id', 'minutes_watched']], on='student_id', how='left')
 
@@ -136,20 +140,52 @@ class main_dashboard_utils:
     
     def plot_top_largest_number_of_users(self):
         student_country = self.get_student_country()
-        return px.bar(student_country.head(), x='students', y='student_country', orientation='h', color='student_country', title='Top 5 Largest Number of Users',
-                        labels={'students': 'Students', 'student_country': 'Student Country'}, color_discrete_sequence=px.colors.qualitative.Prism)
+
+        plot = px.bar(student_country.head(),
+                      x='students',
+                      y='student_country',
+                      orientation='h',
+                      color='student_country',
+                      title='Top Countries with the Most Amount of Students',
+                      labels={'students': 'Students', 'student_country': 'Student Country'},    
+                      color_discrete_sequence=px.colors.qualitative.Prism)
+        
+        return plot
     
     def plot_minutes_watched_by_country(self):
         platform_minutes_watched = self.get_platform_minutes_watched()
-        return px.bar(platform_minutes_watched.head(), x='minutes_watched', y='student_country', orientation='h', color='student_country', title='Minutes watched on the platform by users',
-                        labels={'minutes_watched': 'Minutes Watched', 'student_country': 'Student Country'}, color_discrete_sequence=px.colors.qualitative.Prism)
+
+        return px.bar(platform_minutes_watched.head(),
+                      x='minutes_watched',
+                      y='student_country',
+                      orientation='h',
+                      color='student_country',
+                      title='Minutes Watched on the Platform by Users',
+                      labels={'minutes_watched': 'Minutes Watched', 'student_country': 'Student Country'},
+                      color_discrete_sequence=px.colors.qualitative.Prism)
     
     def plot_minutes_watched_by_month(self):
         monthly_average_minutes_watched = self.get_monthly_average_minutes_watched()
 
+        if monthly_average_minutes_watched.shape[0] > 0:
+            colors = ['lightslategray'] * monthly_average_minutes_watched.shape[0]
+            colors[monthly_average_minutes_watched.minutes_watched.idxmax()] = 'orange'
+        else:
+            colors = []
+
         fig = make_subplots(specs=[[{"secondary_y": True}]])
-        fig.add_trace(go.Bar(x=monthly_average_minutes_watched.month, y=monthly_average_minutes_watched.minutes_watched, name='Minutes Watched', offsetgroup=1), secondary_y=False)
-        fig.add_trace(go.Scatter(x=monthly_average_minutes_watched.month, y=monthly_average_minutes_watched.average_minutes_watched, name='Average Minutes Watched', offsetgroup=2), secondary_y=True)
+        fig.add_trace(go.Bar(x=monthly_average_minutes_watched.month,
+                             y=monthly_average_minutes_watched.minutes_watched,
+                             name='Minutes Watched',
+                             offsetgroup=1,
+                             marker_color=colors), secondary_y=False)
+                
+        fig.add_trace(go.Scatter(x=monthly_average_minutes_watched.month,
+                                 y=monthly_average_minutes_watched.average_minutes_watched,
+                                 name='Average Minutes Watched',
+                                 offsetgroup=2,
+                                 marker_color='green',
+                                 mode='markers+lines'), secondary_y=True)
 
         fig.update_xaxes(title_text='Month')
         fig.update_yaxes(title_text='Minutes Watched', secondary_y=False)
@@ -161,10 +197,27 @@ class main_dashboard_utils:
     def plot_registered_onboarded(self):
         students_registered_onboarded = self.get_students_registered_onboarded()
 
+        if students_registered_onboarded.shape[0] > 0:
+            colors_students = ['lightslategray'] * students_registered_onboarded.shape[0]
+            colors_students[students_registered_onboarded.students.idxmax()] = 'orange'
+
+            colors_onboarded = ['lightslategray'] * students_registered_onboarded.shape[0]
+            colors_onboarded[students_registered_onboarded.onboarded.idxmax()] = 'orange'
+        else:
+            colors_students = []
+            colors_onboarded = []
+
         return go.Figure(data=[
-             go.Bar(name='Students', x=students_registered_onboarded.month, y=students_registered_onboarded.students, offsetgroup=1),
-             go.Bar(name='Onboarded', x=students_registered_onboarded.month, y=students_registered_onboarded.onboarded, offsetgroup=2)]).update_layout(
-            title='Number of Registered Students Compared to Onboarded')
+             go.Bar(name='Students', x=students_registered_onboarded.month,
+                    y=students_registered_onboarded.students,
+                    offsetgroup=1,
+                    marker_color=colors_students),
+            
+             go.Bar(name='Onboarded',
+                    x=students_registered_onboarded.month,
+                    y=students_registered_onboarded.onboarded,
+                    offsetgroup=2,
+                    marker_color=colors_onboarded)]).update_layout(title='Number of Registered Students Compared to Onboarded')
     
     def get_registered_students_kpi(self):
         return self.student_info_df.student_id.nunique()

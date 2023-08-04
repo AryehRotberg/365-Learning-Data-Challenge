@@ -25,6 +25,7 @@ country_option = st.sidebar.selectbox('Select Country', countries_list)
 
 utils = main_dashboard_utils(user_type_option, subscription_type_option, country_option)
 
+st.markdown(description['main_dashboard_description'])
 st.write('')
 
 course_minutes_watched = utils.get_course_minutes_watched().rename(columns={'course_title': 'Course Title',
@@ -36,7 +37,7 @@ st.write('Top 5 Courses Ratings')
 st.dataframe(course_minutes_watched.head(), hide_index=True)
 
 st.write('')
-st.markdown("**KPI'S**")
+st.markdown('**KPIs**')
 
 col1_kpi, col2_kpi, col3_kpi, col4_kpi = st.columns(4)
 col1_kpi.metric('Registered Students', value=utils.get_registered_students_kpi())
@@ -66,4 +67,7 @@ col3_chart.expander('See details:').write(description['main_chart_3'])
 
 # Chart 4
 col4_chart.plotly_chart(utils.plot_registered_onboarded(), use_container_width=True)
-col4_chart.expander('See details:').write('This chart represents the distribution...')
+col4_chart.expander('See details:').write(description['main_chart_4'])
+
+st.write('')
+st.markdown(description['main_dashboard_summary'])
