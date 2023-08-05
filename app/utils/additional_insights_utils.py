@@ -67,7 +67,7 @@ class additional_insights_utils:
                             color='purchase_type',
                             labels={'purchase_type': 'Purchase Type'},
                             color_discrete_sequence=colors,
-                            title='Amount of Purchases Based on Purchase Type')
+                            title='Amount of Purchases By Purchase Type')
         plot.update_layout(yaxis_title='Purchases')
 
         return plot
@@ -84,7 +84,7 @@ class additional_insights_utils:
                       color='student_country',
                       labels={'student_country': 'Student Country'},
                       color_discrete_sequence=px.colors.qualitative.Prism,
-                      title='Engaged Students Based on Country')
+                      title='Engaged Students By Country')
         plot.update_layout(yaxis_title='Engaged')
 
         return plot
@@ -107,7 +107,7 @@ class additional_insights_utils:
                       color='month',
                       color_discrete_sequence=colors,
                       labels={'month': 'Month', 'questions': 'Questions'},
-                      title='Questions Asked Based on Month')
+                      title='Questions Asked By Month')
         
         return plot
     

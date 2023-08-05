@@ -107,7 +107,7 @@ class main_dashboard_utils:
     
     def get_students_registered_onboarded(self):
         monthly_registered_students = pd.merge(self.merged_student_info_purchase, self.student_engagement_df, on='student_id', how='left')
-        monthly_registered_students.date_registered = pd.to_datetime(monthly_registered_students.date_registered)
+        # monthly_registered_students.date_registered = pd.to_datetime(monthly_registered_students.date_registered)
 
         monthly_onboarded_students = monthly_registered_students.copy()
 
@@ -158,7 +158,7 @@ class main_dashboard_utils:
                       y='student_country',
                       orientation='h',
                       color='student_country',
-                      title='Minutes Watched on the Platform by Users',
+                      title='Minutes Watched on the Platform by Country',
                       labels={'minutes_watched': 'Minutes Watched', 'student_country': 'Student Country'},
                       color_discrete_sequence=px.colors.qualitative.Prism)
     
