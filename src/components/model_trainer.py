@@ -14,24 +14,15 @@ from sklearn.model_selection import GridSearchCV
 
 from sklearn.metrics import classification_report, roc_auc_score, f1_score
 
-from dataclasses import dataclass
-
-
 # from sklearn.metrics import RocCurveDisplay
 # RocCurveDisplay.from_estimator(classifier, X_test, y_test)
 
-
-@dataclass
-class ModelTrainerConfig:
-    X_train = pd.read_csv('data/train/X_train.csv').values
-    X_test = pd.read_csv('data/test/X_test.csv').values
-    y_train = pd.read_csv('data/train/y_train.csv')
-    y_test = pd.read_csv('data/test/y_test.csv')
-
-
 class ModelTrainer:
     def __init__(self):
-        self.config = ModelTrainerConfig()
+        self.X_train = pd.read_csv('data/train/X_train.csv').values
+        self.X_test = pd.read_csv('data/test/X_test.csv').values
+        self.y_train = pd.read_csv('data/train/y_train.csv').values
+        self.y_test = pd.read_csv('data/test/y_test.csv').values
     
     def get_gridsearch_dict(self):
         self.grid_search = {
@@ -85,7 +76,7 @@ class ModelTrainer:
                 }
             }
         }
-        
+
         return self.grid_search
     
     def get_tuned_models_scores(self, grid_search: dict, verbose=False):
@@ -99,7 +90,7 @@ class ModelTrainer:
                             refit='f1_micro',
                             verbose=10 if verbose else 0)
             
-            gs.fit(self.config.X_train, self.config.y_train.values.ravel())
+            gs.fit(self.X_train, self.y_train.ravel())
             
             scores.append({
                 'classifier': classifier_name,
@@ -115,25 +106,26 @@ class ModelTrainer:
         classifier = scores_df.loc[scores_df.best_score.idxmax()].best_estimator
         params = scores_df.loc[scores_df.best_score.idxmax()].best_params
 
-        classifier.fit(self.config.X_train, self.config.y_train.values.ravel())
+        classifier.fit(self.X_train, self.y_train.ravel())
 
         return classifier, params
     
     def save_best_classifier(self, classifier, params):
-        y_pred = classifier.predict(self.config.X_test)
+        y_pred = classifier.predict(self.X_test)
 
-        report = pd.DataFrame(classification_report(self.config.y_test, y_pred, output_dict=True)).transpose()
+        report = pd.DataFrame(classification_report(self.y_test, y_pred, output_dict=True)).transpose()
         report.to_csv('data/processed/best_classifier_report.csv', index=False)
 
         mlflow.set_experiment('365 Learning Data Challenge - Machine Learning')
 
         with mlflow.start_run():
-            for param_type, value in params.items():
-                mlflow.log_param(param_type, value)
+            if params is not None:
+                for param_type, value in params.items():
+                    mlflow.log_param(param_type, value)
             
             mlflow.log_artifact('data/processed/best_classifier_report.csv')
 
-            mlflow.log_metric('f1_score', f1_score(self.config.y_test, y_pred))
-            mlflow.log_metric('roc_auc_score', roc_auc_score(self.config.y_test, y_pred))
+            mlflow.log_metric('f1_score', f1_score(self.y_test, y_pred))
+            mlflow.log_metric('roc_auc_score', roc_auc_score(self.y_test, y_pred))
 
             mlflow.sklearn.log_model(classifier, 'Best_Classifier', registered_model_name=type(classifier).__name__)
