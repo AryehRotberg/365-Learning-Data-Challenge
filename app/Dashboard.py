@@ -29,15 +29,15 @@ st.markdown(description['main_dashboard_description'])
 st.write('')
 
 course_minutes_watched = utils.get_course_minutes_watched().rename(columns={'course_title': 'Course Title',
-                                                                'average_course_rating': 'Average Course Rating',
-                                                                'ratings': 'Ratings',
-                                                                'minutes_watched': 'Minutes Watched',
-                                                                'average_minutes_watched': 'Average Minutes Watched'})
-st.write('Top 5 Courses Ratings')
+                                                                            'average_course_rating': 'Average Course Rating',
+                                                                            'ratings': 'Ratings',
+                                                                            'minutes_watched': 'Minutes Watched',
+                                                                            'average_minutes_watched': 'Average Minutes Watched'})
+st.write('**Top 5 Courses Ratings**')
 st.dataframe(course_minutes_watched.head(), hide_index=True)
 
 st.write('')
-st.markdown('**KPIs**')
+st.markdown("**KPI'S**")
 
 col1_kpi, col2_kpi, col3_kpi, col4_kpi = st.columns(4)
 col1_kpi.metric('Registered Students', value=utils.get_registered_students_kpi())

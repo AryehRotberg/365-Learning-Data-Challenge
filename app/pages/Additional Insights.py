@@ -36,3 +36,8 @@ col3_chart.expander('See details:').write('This chart represents the distributio
 
 col4_chart.plotly_chart(utils.get_hub_questions_asked_per_month(), use_container_width=True)
 col4_chart.expander('See details:').write('This chart represents the distribution...')
+
+st.write('')
+st.markdown(description['additional_insights_summary_1'])
+st.markdown(description['additional_insights_summary_2'])
+st.markdown(description['additional_insights_summary_3'])

@@ -27,16 +27,19 @@ class additional_insights_utils:
         purchases_per_month = self.student_purchases_df.copy()
 
         # Onboarded Per Month
-        onboarded_per_month['month'] = onboarded_per_month.date_engaged.apply(lambda date : date.month)
+        onboarded_per_month['month'] = onboarded_per_month.date_engaged.dt.month
         onboarded_per_month = onboarded_per_month[['month']].groupby('month').size().reset_index()
         onboarded_per_month = onboarded_per_month.rename(columns={0: 'Onboarded'})
 
         # Purchases Per Month
-        purchases_per_month['month'] = purchases_per_month.date_purchased.apply(lambda date : date.month)
+        purchases_per_month['month'] = purchases_per_month.date_purchased.dt.month
         purchases_per_month = purchases_per_month[['month']].groupby('month').size().reset_index()
         purchases_per_month = purchases_per_month.rename(columns={0: 'Purchases'})
 
-        purchases_onboarded_per_month = pd.merge(purchases_per_month, onboarded_per_month, on='month')
+        purchases_onboarded_per_month = pd.merge(purchases_per_month,
+                                                 onboarded_per_month,
+                                                 on='month')
+        
         purchases_onboarded_per_month.month = purchases_onboarded_per_month.month.map(self.month_names_dict)
         purchases_onboarded_per_month['Percentage'] = (purchases_onboarded_per_month.Purchases / purchases_onboarded_per_month.Onboarded).round(4) * 100
 
@@ -52,9 +55,9 @@ class additional_insights_utils:
 
         fig.update_xaxes(title_text='Month')
 
-        fig.update_yaxes(title_text='Amount of Purchases', secondary_y=False)
+        fig.update_yaxes(title_text='Purchases', secondary_y=False)
         fig.update_yaxes(title_text='Onboarded', secondary_y=True)
-        fig.update_layout(title='Amount of Purchases by Month')
+        fig.update_layout(title='Number of Purchases Compared to Onboarded by Month')
 
         return fig
     
@@ -67,13 +70,16 @@ class additional_insights_utils:
                             color='purchase_type',
                             labels={'purchase_type': 'Purchase Type'},
                             color_discrete_sequence=colors,
-                            title='Amount of Purchases By Purchase Type')
-        plot.update_layout(yaxis_title='Purchases')
+                            title='Number of Purchases By Purchase Type').update_layout(yaxis_title='Purchases')
 
         return plot
     
     def get_student_engagement_countries(self):
-        student_engagement_countries = pd.merge(self.student_info_df[['student_id', 'student_country']], self.student_engagement_df[['student_id']], on='student_id', how='left')
+        student_engagement_countries = pd.merge(self.student_info_df[['student_id', 'student_country']],
+                                                self.student_engagement_df[['student_id']],
+                                                on='student_id',
+                                                how='left')
+        
         student_engagement_countries = student_engagement_countries.groupby('student_country').size().reset_index().sort_values(by=0, ascending=False).head()
         student_engagement_countries = student_engagement_countries.rename(columns={0: 'engaged'})
 
@@ -84,7 +90,8 @@ class additional_insights_utils:
                       color='student_country',
                       labels={'student_country': 'Student Country'},
                       color_discrete_sequence=px.colors.qualitative.Prism,
-                      title='Engaged Students By Country')
+                      title='Number of Engaged Students By Country')
+        
         plot.update_layout(yaxis_title='Engaged')
 
         return plot
@@ -101,16 +108,14 @@ class additional_insights_utils:
         colors[7] = 'orange'
 
         # Plot
-        plot = px.bar(data_frame=questions_per_month,
+        return px.bar(data_frame=questions_per_month,
                       x='month',
                       y='questions',
                       color='month',
                       color_discrete_sequence=colors,
                       labels={'month': 'Month', 'questions': 'Questions'},
-                      title='Questions Asked By Month')
+                      title='Number of Questions Asked By Month')
         
-        return plot
-    
     def get_engagements_amount(self):
         return self.student_engagement_df.shape[0] / 1000
     

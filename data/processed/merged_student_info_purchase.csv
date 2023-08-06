@@ -126,7 +126,7 @@ student_id,student_country,date_registered,purchase_type,paid
 258927,IN,2022-01-02,Free,False
 258928,SA,2022-01-02,Free,False
 258929,US,2022-01-02,Free,False
-258930,SA,2022-01-02,Free,False
+258930,SA,2022-01-02,Annual,True
 258931,SA,2022-01-02,Free,False
 258932,SA,2022-01-02,Free,False
 258933,US,2022-01-02,Free,False
@@ -448,7 +448,7 @@ student_id,student_country,date_registered,purchase_type,paid
 259255,VN,2022-01-04,Free,False
 259256,IN,2022-01-04,Free,False
 259257,IN,2022-01-04,Free,False
-259258,US,2022-01-04,Free,False
+259258,US,2022-01-04,Annual,True
 259259,EG,2022-01-04,Free,False
 259260,GB,2022-01-04,Annual,True
 259261,NL,2022-01-04,Free,False
@@ -689,7 +689,7 @@ student_id,student_country,date_registered,purchase_type,paid
 259501,IN,2022-01-06,Free,False
 259502,US,2022-01-06,Free,False
 259503,VN,2022-01-06,Free,False
-259504,DE,2022-01-06,Free,False
+259504,DE,2022-01-06,Annual,True
 259505,IN,2022-01-06,Free,False
 259506,CA,2022-01-06,Annual,True
 259507,IN,2022-01-06,Free,False
@@ -883,7 +883,7 @@ student_id,student_country,date_registered,purchase_type,paid
 259698,IN,2022-01-08,Free,False
 259699,IN,2022-01-08,Free,False
 259700,IN,2022-01-08,Free,False
-259702,DE,2022-01-08,Free,False
+259702,DE,2022-01-08,Monthly,True
 259703,VN,2022-01-08,Free,False
 259704,DE,2022-01-08,Free,False
 259705,NG,2022-01-08,Free,False
@@ -956,7 +956,7 @@ student_id,student_country,date_registered,purchase_type,paid
 259774,IN,2022-01-09,Free,False
 259775,CA,2022-01-09,Free,False
 259776,IN,2022-01-09,Free,False
-259777,ID,2022-01-09,Free,False
+259777,ID,2022-01-09,Annual,True
 259778,IN,2022-01-09,Free,False
 259779,NP,2022-01-09,Free,False
 259780,IN,2022-01-09,Free,False
@@ -1036,7 +1036,7 @@ student_id,student_country,date_registered,purchase_type,paid
 259857,EG,2022-01-09,Free,False
 259858,US,2022-01-09,Free,False
 259859,PT,2022-01-09,Free,False
-259860,EG,2022-01-09,Free,False
+259860,EG,2022-01-09,Annual,True
 259861,BR,2022-01-09,Free,False
 259862,US,2022-01-09,Annual,True
 259863,EG,2022-01-10,Free,False
@@ -1059,7 +1059,7 @@ student_id,student_country,date_registered,purchase_type,paid
 259881,SA,2022-01-10,Free,False
 259882,IN,2022-01-10,Free,False
 259883,IN,2022-01-10,Free,False
-259884,NG,2022-01-10,Free,False
+259884,NG,2022-01-10,Annual,True
 259885,AR,2022-01-10,Free,False
 259886,IN,2022-01-10,Free,False
 259887,IN,2022-01-10,Free,False
@@ -1133,7 +1133,7 @@ student_id,student_country,date_registered,purchase_type,paid
 259962,CA,2022-01-10,Free,False
 259963,GB,2022-01-10,Free,False
 259964,SA,2022-01-10,Free,False
-259965,US,2022-01-10,Free,False
+259965,US,2022-01-10,Monthly,True
 259966,IT,2022-01-10,Free,False
 259967,CO,2022-01-10,Free,False
 259968,EG,2022-01-10,Free,False
@@ -1339,7 +1339,7 @@ student_id,student_country,date_registered,purchase_type,paid
 260170,IN,2022-01-12,Free,False
 260171,IN,2022-01-12,Free,False
 260172,DZ,2022-01-12,Free,False
-260173,US,2022-01-12,Free,False
+260173,US,2022-01-12,Quarterly,True
 260174,HT,2022-01-12,Free,False
 260175,PT,2022-01-12,Free,False
 260176,NL,2022-01-12,Annual,True
@@ -1516,7 +1516,7 @@ student_id,student_country,date_registered,purchase_type,paid
 260353,IN,2022-01-14,Free,False
 260354,US,2022-01-14,Free,False
 260355,SA,2022-01-14,Free,False
-260356,ZM,2022-01-14,Free,False
+260356,ZM,2022-01-14,Annual,True
 260357,US,2022-01-14,Free,False
 260358,NG,2022-01-14,Free,False
 260359,SA,2022-01-14,Free,False
@@ -1621,7 +1621,7 @@ student_id,student_country,date_registered,purchase_type,paid
 260461,DZ,2022-01-14,Free,False
 260462,EG,2022-01-14,Free,False
 260464,ES,2022-01-14,Free,False
-260465,ES,2022-01-14,Free,False
+260465,ES,2022-01-14,Monthly,True
 260466,CY,2022-01-14,Free,False
 260467,DZ,2022-01-14,Free,False
 260468,BR,2022-01-14,Free,False
@@ -1797,7 +1797,7 @@ student_id,student_country,date_registered,purchase_type,paid
 260643,IN,2022-01-16,Free,False
 260644,IN,2022-01-16,Free,False
 260645,US,2022-01-16,Free,False
-260646,NO,2022-01-16,Free,False
+260646,NO,2022-01-16,Annual,True
 260647,NG,2022-01-16,Free,False
 260648,ES,2022-01-16,Free,False
 260649,DE,2022-01-16,Annual,True
@@ -2106,7 +2106,7 @@ student_id,student_country,date_registered,purchase_type,paid
 260961,SD,2022-01-19,Free,False
 260962,IN,2022-01-19,Free,False
 260963,GB,2022-01-19,Free,False
-260964,IN,2022-01-19,Free,False
+260964,IN,2022-01-19,Annual,True
 260965,IN,2022-01-19,Free,False
 260966,EG,2022-01-19,Free,False
 260967,TH,2022-01-19,Free,False
@@ -2620,7 +2620,7 @@ student_id,student_country,date_registered,purchase_type,paid
 261488,EG,2022-01-24,Free,False
 261489,US,2022-01-24,Free,False
 261490,AE,2022-01-24,Annual,True
-261491,US,2022-01-24,Free,False
+261491,US,2022-01-24,Monthly,True
 261492,EG,2022-01-24,Free,False
 261493,NG,2022-01-24,Free,False
 261494,CA,2022-01-24,Free,False
@@ -2693,7 +2693,7 @@ student_id,student_country,date_registered,purchase_type,paid
 261561,IN,2022-01-25,Free,False
 261562,MA,2022-01-25,Free,False
 261563,SE,2022-01-25,Free,False
-261564,US,2022-01-25,Free,False
+261564,US,2022-01-25,Quarterly,True
 261565,US,2022-01-25,Annual,True
 261566,IN,2022-01-25,Free,False
 261567,DE,2022-01-25,Annual,True
@@ -2737,7 +2737,7 @@ student_id,student_country,date_registered,purchase_type,paid
 261605,AU,2022-01-26,Free,False
 261606,GH,2022-01-26,Free,False
 261607,US,2022-01-26,Annual,True
-261608,US,2022-01-26,Free,False
+261608,US,2022-01-26,Quarterly,True
 261609,IN,2022-01-26,Free,False
 261610,US,2022-01-26,Annual,True
 261611,ID,2022-01-26,Free,False
@@ -2797,7 +2797,7 @@ student_id,student_country,date_registered,purchase_type,paid
 261665,US,2022-01-26,Free,False
 261666,IN,2022-01-26,Free,False
 261667,NG,2022-01-26,Free,False
-261668,CA,2022-01-26,Free,False
+261668,CA,2022-01-26,Annual,True
 261669,US,2022-01-26,Free,False
 261670,GE,2022-01-26,Annual,True
 261671,RS,2022-01-26,Free,False
@@ -2852,7 +2852,7 @@ student_id,student_country,date_registered,purchase_type,paid
 261721,FR,2022-01-27,Annual,True
 261722,NL,2022-01-27,Free,False
 261723,NP,2022-01-27,Free,False
-261724,KR,2022-01-27,Free,False
+261724,KR,2022-01-27,Annual,True
 261725,,2022-01-27,Free,False
 261726,IN,2022-01-27,Free,False
 261727,FR,2022-01-27,Free,False
@@ -3384,7 +3384,7 @@ student_id,student_country,date_registered,purchase_type,paid
 262267,IN,2022-02-01,Free,False
 262268,PL,2022-02-01,Free,False
 262269,EG,2022-02-01,Free,False
-262270,US,2022-02-01,Free,False
+262270,US,2022-02-01,Annual,True
 262271,IN,2022-02-01,Free,False
 262272,MX,2022-02-01,Free,False
 262273,GB,2022-02-01,Annual,True
@@ -3533,7 +3533,7 @@ student_id,student_country,date_registered,purchase_type,paid
 262418,VN,2022-02-03,Free,False
 262419,DE,2022-02-03,Free,False
 262420,US,2022-02-03,Free,False
-262421,US,2022-02-03,Annual,True
+262421,US,2022-02-03,Free,False
 262422,ID,2022-02-03,Free,False
 262423,US,2022-02-03,Free,False
 262424,EG,2022-02-03,Free,False
@@ -3685,7 +3685,7 @@ student_id,student_country,date_registered,purchase_type,paid
 262576,NO,2022-02-03,Free,False
 262577,FR,2022-02-03,Free,False
 262578,CA,2022-02-03,Free,False
-262580,CO,2022-02-03,Free,False
+262580,CO,2022-02-03,Annual,True
 262581,US,2022-02-03,Free,False
 262582,BD,2022-02-03,Free,False
 262583,US,2022-02-03,Free,False
@@ -3782,7 +3782,7 @@ student_id,student_country,date_registered,purchase_type,paid
 262674,US,2022-02-04,Free,False
 262675,US,2022-02-04,Free,False
 262676,NL,2022-02-04,Free,False
-262677,GB,2022-02-04,Annual,True
+262677,GB,2022-02-04,Free,False
 262678,EG,2022-02-04,Free,False
 262679,IN,2022-02-04,Free,False
 262680,GB,2022-02-04,Free,False
@@ -3923,7 +3923,7 @@ student_id,student_country,date_registered,purchase_type,paid
 262818,BD,2022-02-06,Free,False
 262819,US,2022-02-06,Annual,True
 262820,DE,2022-02-06,Free,False
-262821,NZ,2022-02-06,Free,False
+262821,NZ,2022-02-06,Annual,True
 262822,IN,2022-02-06,Free,False
 262823,IN,2022-02-06,Free,False
 262825,IN,2022-02-06,Free,False
@@ -4167,7 +4167,7 @@ student_id,student_country,date_registered,purchase_type,paid
 263073,IN,2022-02-08,Free,False
 263074,BG,2022-02-08,Free,False
 263075,IN,2022-02-08,Free,False
-263076,SD,2022-02-08,Free,False
+263076,SD,2022-02-08,Monthly,True
 263077,BG,2022-02-08,Free,False
 263078,BG,2022-02-08,Free,False
 263079,BG,2022-02-08,Free,False
@@ -4563,7 +4563,7 @@ student_id,student_country,date_registered,purchase_type,paid
 263480,SG,2022-02-13,Free,False
 263481,US,2022-02-13,Free,False
 263482,AU,2022-02-13,Free,False
-263483,US,2022-02-13,Free,False
+263483,US,2022-02-13,Monthly,True
 263484,ES,2022-02-13,Free,False
 263485,PK,2022-02-13,Free,False
 263486,CO,2022-02-13,Free,False
@@ -4747,7 +4747,7 @@ student_id,student_country,date_registered,purchase_type,paid
 263669,FR,2022-02-14,Free,False
 263670,BR,2022-02-14,Free,False
 263671,US,2022-02-14,Free,False
-263672,US,2022-02-14,Free,False
+263672,US,2022-02-14,Annual,True
 263673,MX,2022-02-14,Free,False
 263674,IN,2022-02-14,Free,False
 263675,MX,2022-02-14,Free,False
@@ -4853,7 +4853,7 @@ student_id,student_country,date_registered,purchase_type,paid
 263780,US,2022-02-15,Free,False
 263781,KR,2022-02-15,Free,False
 263782,TR,2022-02-15,Free,False
-263783,US,2022-02-15,Free,False
+263783,US,2022-02-15,Monthly,True
 263785,EG,2022-02-15,Free,False
 263786,IT,2022-02-15,Free,False
 263787,KE,2022-02-15,Free,False
@@ -4892,7 +4892,7 @@ student_id,student_country,date_registered,purchase_type,paid
 263822,EG,2022-02-16,Free,False
 263823,IN,2022-02-16,Free,False
 263824,SA,2022-02-16,Free,False
-263825,SA,2022-02-16,Free,False
+263825,SA,2022-02-16,Monthly,True
 263826,ZA,2022-02-16,Free,False
 263827,EG,2022-02-16,Free,False
 263828,GH,2022-02-16,Free,False
@@ -4979,7 +4979,7 @@ student_id,student_country,date_registered,purchase_type,paid
 263910,BR,2022-02-17,Free,False
 263911,US,2022-02-17,Free,False
 263912,DZ,2022-02-17,Free,False
-263913,US,2022-02-17,Free,False
+263913,US,2022-02-17,Monthly,True
 263914,US,2022-02-17,Free,False
 263915,US,2022-02-17,Free,False
 263916,US,2022-02-17,Free,False
@@ -5146,7 +5146,7 @@ student_id,student_country,date_registered,purchase_type,paid
 264078,CA,2022-02-18,Free,False
 264079,US,2022-02-18,Free,False
 264080,US,2022-02-18,Free,False
-264081,SG,2022-02-18,Free,False
+264081,SG,2022-02-18,Annual,True
 264082,IN,2022-02-18,Free,False
 264083,NG,2022-02-18,Free,False
 264084,NG,2022-02-18,Free,False
@@ -5354,7 +5354,7 @@ student_id,student_country,date_registered,purchase_type,paid
 264292,ZA,2022-02-20,Free,False
 264293,ID,2022-02-20,Free,False
 264294,IN,2022-02-20,Free,False
-264295,US,2022-02-20,Free,False
+264295,US,2022-02-20,Quarterly,True
 264296,EG,2022-02-20,Free,False
 264297,SA,2022-02-20,Free,False
 264298,ID,2022-02-20,Free,False
@@ -5904,7 +5904,7 @@ student_id,student_country,date_registered,purchase_type,paid
 264853,IN,2022-02-24,Free,False
 264854,IE,2022-02-24,Free,False
 264855,DE,2022-02-24,Free,False
-264856,IN,2022-02-24,Free,False
+264856,IN,2022-02-24,Annual,True
 264857,PE,2022-02-24,Free,False
 264858,EG,2022-02-24,Free,False
 264859,IN,2022-02-24,Free,False
@@ -6157,7 +6157,7 @@ student_id,student_country,date_registered,purchase_type,paid
 265107,CH,2022-02-26,Free,False
 265108,IN,2022-02-26,Free,False
 265109,EG,2022-02-26,Free,False
-265110,US,2022-02-26,Free,False
+265110,US,2022-02-26,Monthly,True
 265111,PT,2022-02-26,Free,False
 265112,SA,2022-02-26,Free,False
 265113,US,2022-02-26,Free,False
@@ -6177,7 +6177,7 @@ student_id,student_country,date_registered,purchase_type,paid
 265127,TR,2022-02-26,Free,False
 265128,US,2022-02-26,Free,False
 265129,IE,2022-02-26,Free,False
-265130,RS,2022-02-26,Free,False
+265130,RS,2022-02-26,Monthly,True
 265131,US,2022-02-26,Free,False
 265132,EG,2022-02-26,Free,False
 265133,NG,2022-02-26,Free,False
@@ -6222,7 +6222,7 @@ student_id,student_country,date_registered,purchase_type,paid
 265172,US,2022-02-27,Free,False
 265173,EG,2022-02-27,Free,False
 265175,US,2022-02-27,Free,False
-265176,US,2022-02-27,Free,False
+265176,US,2022-02-27,Monthly,True
 265177,ZA,2022-02-27,Free,False
 265178,IN,2022-02-27,Free,False
 265179,IN,2022-02-27,Free,False
@@ -6256,7 +6256,7 @@ student_id,student_country,date_registered,purchase_type,paid
 265207,IN,2022-02-27,Free,False
 265208,GB,2022-02-27,Free,False
 265209,EG,2022-02-27,Free,False
-265210,IL,2022-02-27,Free,False
+265210,IL,2022-02-27,Monthly,True
 265211,IN,2022-02-27,Free,False
 265212,IN,2022-02-27,Free,False
 265213,MA,2022-02-27,Free,False
@@ -6560,7 +6560,7 @@ student_id,student_country,date_registered,purchase_type,paid
 265516,IN,2022-03-01,Free,False
 265517,GB,2022-03-01,Free,False
 265518,IN,2022-03-01,Free,False
-265519,US,2022-03-01,Free,False
+265519,US,2022-03-01,Monthly,True
 265520,PT,2022-03-01,Free,False
 265521,KE,2022-03-01,Free,False
 265522,CA,2022-03-01,Free,False
@@ -6619,7 +6619,7 @@ student_id,student_country,date_registered,purchase_type,paid
 265575,FR,2022-03-02,Free,False
 265576,US,2022-03-02,Free,False
 265577,GB,2022-03-02,Free,False
-265578,SG,2022-03-02,Free,False
+265578,SG,2022-03-02,Annual,True
 265579,US,2022-03-02,Free,False
 265580,US,2022-03-02,Free,False
 265581,CA,2022-03-02,Annual,True
@@ -6882,7 +6882,7 @@ student_id,student_country,date_registered,purchase_type,paid
 265845,DE,2022-03-04,Free,False
 265846,IL,2022-03-04,Free,False
 265847,BG,2022-03-04,Free,False
-265848,IN,2022-03-04,Free,False
+265848,IN,2022-03-04,Monthly,True
 265849,IN,2022-03-04,Free,False
 265850,BG,2022-03-04,Free,False
 265851,SG,2022-03-04,Free,False
@@ -6911,7 +6911,7 @@ student_id,student_country,date_registered,purchase_type,paid
 265875,FR,2022-03-04,Free,False
 265876,EG,2022-03-04,Free,False
 265877,NG,2022-03-04,Free,False
-265878,CA,2022-03-04,Free,False
+265878,CA,2022-03-04,Monthly,True
 265879,US,2022-03-04,Annual,True
 265880,IN,2022-03-04,Free,False
 265881,MA,2022-03-04,Free,False
@@ -6937,7 +6937,7 @@ student_id,student_country,date_registered,purchase_type,paid
 265903,IN,2022-03-04,Free,False
 265904,GB,2022-03-04,Free,False
 265905,NG,2022-03-04,Free,False
-265906,US,2022-03-04,Free,False
+265906,US,2022-03-04,Monthly,True
 265907,NG,2022-03-04,Free,False
 265908,NG,2022-03-04,Free,False
 265909,CA,2022-03-04,Free,False
@@ -6997,7 +6997,7 @@ student_id,student_country,date_registered,purchase_type,paid
 265963,FR,2022-03-05,Free,False
 265964,IN,2022-03-05,Free,False
 265965,US,2022-03-05,Free,False
-265966,US,2022-03-05,Free,False
+265966,US,2022-03-05,Monthly,True
 265967,US,2022-03-05,Annual,True
 265968,IL,2022-03-05,Free,False
 265969,EG,2022-03-05,Free,False
@@ -7031,7 +7031,7 @@ student_id,student_country,date_registered,purchase_type,paid
 265998,SE,2022-03-05,Free,False
 265999,US,2022-03-05,Free,False
 266000,BR,2022-03-05,Free,False
-266001,GB,2022-03-05,Free,False
+266001,GB,2022-03-05,Monthly,True
 266002,DZ,2022-03-05,Free,False
 266003,DE,2022-03-05,Free,False
 266004,RO,2022-03-05,Free,False
@@ -7387,7 +7387,7 @@ student_id,student_country,date_registered,purchase_type,paid
 266363,NG,2022-03-08,Free,False
 266364,NG,2022-03-08,Free,False
 266365,AZ,2022-03-08,Free,False
-266366,US,2022-03-08,Free,False
+266366,US,2022-03-08,Monthly,True
 266367,MG,2022-03-08,Free,False
 266368,BG,2022-03-08,Free,False
 266369,GB,2022-03-08,Free,False
@@ -7415,14 +7415,14 @@ student_id,student_country,date_registered,purchase_type,paid
 266392,AU,2022-03-08,Free,False
 266393,IN,2022-03-08,Free,False
 266394,KE,2022-03-08,Free,False
-266395,NL,2022-03-08,Free,False
+266395,NL,2022-03-08,Annual,True
 266396,US,2022-03-08,Free,False
 266397,FR,2022-03-08,Free,False
 266398,FR,2022-03-08,Free,False
 266399,FR,2022-03-08,Free,False
 266400,GB,2022-03-08,Free,False
 266401,IT,2022-03-08,Free,False
-266402,CH,2022-03-08,Free,False
+266402,CH,2022-03-08,Monthly,True
 266403,DE,2022-03-08,Free,False
 266404,IN,2022-03-08,Free,False
 266405,IN,2022-03-08,Free,False
@@ -7475,7 +7475,7 @@ student_id,student_country,date_registered,purchase_type,paid
 266452,IN,2022-03-08,Free,False
 266453,IN,2022-03-08,Free,False
 266454,NG,2022-03-08,Free,False
-266455,US,2022-03-08,Free,False
+266455,US,2022-03-08,Monthly,True
 266456,FR,2022-03-08,Annual,True
 266457,US,2022-03-08,Free,False
 266458,CA,2022-03-08,Free,False
@@ -7635,7 +7635,7 @@ student_id,student_country,date_registered,purchase_type,paid
 266613,US,2022-03-09,Free,False
 266614,US,2022-03-09,Annual,True
 266615,MX,2022-03-10,Free,False
-266616,US,2022-03-10,Free,False
+266616,US,2022-03-10,Monthly,True
 266617,CA,2022-03-10,Free,False
 266618,PH,2022-03-10,Free,False
 266619,OM,2022-03-10,Free,False
@@ -7905,7 +7905,7 @@ student_id,student_country,date_registered,purchase_type,paid
 266891,GB,2022-03-11,Free,False
 266892,CA,2022-03-11,Free,False
 266893,ES,2022-03-11,Free,False
-266894,EG,2022-03-11,Free,False
+266894,EG,2022-03-11,Monthly,True
 266895,EG,2022-03-11,Free,False
 266896,HU,2022-03-12,Free,False
 266897,US,2022-03-12,Free,False
@@ -8120,7 +8120,7 @@ student_id,student_country,date_registered,purchase_type,paid
 267111,FR,2022-03-13,Free,False
 267112,GB,2022-03-13,Free,False
 267113,AR,2022-03-13,Free,False
-267114,US,2022-03-13,Free,False
+267114,US,2022-03-13,Annual,True
 267115,EC,2022-03-13,Free,False
 267116,US,2022-03-13,Free,False
 267117,US,2022-03-13,Free,False
@@ -8200,7 +8200,7 @@ student_id,student_country,date_registered,purchase_type,paid
 267192,PK,2022-03-14,Free,False
 267193,US,2022-03-14,Free,False
 267194,IN,2022-03-14,Free,False
-267195,SE,2022-03-14,Free,False
+267195,SE,2022-03-14,Monthly,True
 267196,US,2022-03-14,Free,False
 267197,SO,2022-03-14,Free,False
 267198,PL,2022-03-14,Free,False
@@ -8498,7 +8498,7 @@ student_id,student_country,date_registered,purchase_type,paid
 267495,BR,2022-03-16,Free,False
 267496,CA,2022-03-16,Annual,True
 267497,BR,2022-03-16,Free,False
-267498,US,2022-03-16,Free,False
+267498,US,2022-03-16,Monthly,True
 267499,ZA,2022-03-16,Free,False
 267500,IN,2022-03-16,Free,False
 267501,IN,2022-03-16,Free,False
@@ -8803,7 +8803,7 @@ student_id,student_country,date_registered,purchase_type,paid
 267808,IN,2022-03-18,Free,False
 267810,FR,2022-03-18,Free,False
 267811,NG,2022-03-18,Free,False
-267812,CO,2022-03-18,Free,False
+267812,CO,2022-03-18,Annual,True
 267813,GB,2022-03-18,Annual,True
 267814,NG,2022-03-18,Free,False
 267815,GB,2022-03-18,Free,False
@@ -9026,7 +9026,7 @@ student_id,student_country,date_registered,purchase_type,paid
 268042,NZ,2022-03-20,Free,False
 268043,US,2022-03-20,Free,False
 268044,LK,2022-03-20,Free,False
-268045,SG,2022-03-20,Free,False
+268045,SG,2022-03-20,Monthly,True
 268046,FR,2022-03-20,Free,False
 268047,US,2022-03-20,Free,False
 268048,LK,2022-03-20,Free,False
@@ -9092,7 +9092,7 @@ student_id,student_country,date_registered,purchase_type,paid
 268109,IN,2022-03-20,Free,False
 268111,IN,2022-03-20,Free,False
 268112,IN,2022-03-20,Free,False
-268113,IT,2022-03-20,Free,False
+268113,IT,2022-03-20,Monthly,True
 268114,GB,2022-03-20,Free,False
 268115,CA,2022-03-20,Free,False
 268116,NG,2022-03-20,Free,False
@@ -9219,7 +9219,7 @@ student_id,student_country,date_registered,purchase_type,paid
 268239,GT,2022-03-21,Free,False
 268240,IN,2022-03-21,Free,False
 268241,BR,2022-03-21,Free,False
-268242,US,2022-03-21,Free,False
+268242,US,2022-03-21,Annual,True
 268243,IQ,2022-03-21,Free,False
 268244,FI,2022-03-21,Free,False
 268245,US,2022-03-21,Free,False
@@ -9779,7 +9779,7 @@ student_id,student_country,date_registered,purchase_type,paid
 268854,IN,2022-03-29,Free,False
 268855,KE,2022-03-29,Free,False
 268856,IN,2022-03-29,Free,False
-268857,PT,2022-03-29,Free,False
+268857,PT,2022-03-29,Monthly,True
 268858,GB,2022-03-29,Free,False
 268859,DE,2022-03-29,Free,False
 268860,ID,2022-03-29,Free,False
@@ -10036,7 +10036,7 @@ student_id,student_country,date_registered,purchase_type,paid
 269127,BG,2022-03-31,Free,False
 269128,BG,2022-03-31,Free,False
 269129,CA,2022-03-31,Free,False
-269130,BR,2022-03-31,Free,False
+269130,BR,2022-03-31,Annual,True
 269131,JP,2022-03-31,Free,False
 269132,IN,2022-03-31,Free,False
 269133,US,2022-03-31,Free,False
@@ -10465,7 +10465,7 @@ student_id,student_country,date_registered,purchase_type,paid
 269567,ID,2022-04-04,Free,False
 269568,IN,2022-04-04,Free,False
 269569,IN,2022-04-04,Free,False
-269570,AE,2022-04-04,Free,False
+269570,AE,2022-04-04,Monthly,True
 269571,CY,2022-04-04,Free,False
 269572,IN,2022-04-04,Free,False
 269573,NG,2022-04-04,Free,False
@@ -10662,7 +10662,7 @@ student_id,student_country,date_registered,purchase_type,paid
 269768,NG,2022-04-05,Free,False
 269769,ZA,2022-04-05,Free,False
 269770,UG,2022-04-05,Free,False
-269771,US,2022-04-05,Free,False
+269771,US,2022-04-05,Monthly,True
 269772,PE,2022-04-05,Free,False
 269773,AE,2022-04-05,Free,False
 269774,EG,2022-04-05,Free,False
@@ -10793,7 +10793,7 @@ student_id,student_country,date_registered,purchase_type,paid
 269903,ET,2022-04-07,Free,False
 269906,US,2022-04-07,Free,False
 269907,US,2022-04-07,Free,False
-269908,US,2022-04-07,Free,False
+269908,US,2022-04-07,Monthly,True
 269909,US,2022-04-07,Free,False
 269910,US,2022-04-07,Free,False
 269912,US,2022-04-07,Free,False
@@ -10862,7 +10862,7 @@ student_id,student_country,date_registered,purchase_type,paid
 269981,US,2022-04-07,Free,False
 269982,IN,2022-04-07,Free,False
 269983,MA,2022-04-07,Free,False
-269984,PL,2022-04-07,Free,False
+269984,PL,2022-04-07,Monthly,True
 269985,IN,2022-04-07,Free,False
 269986,AE,2022-04-07,Free,False
 269987,OM,2022-04-07,Free,False
@@ -10886,7 +10886,7 @@ student_id,student_country,date_registered,purchase_type,paid
 270006,PH,2022-04-07,Free,False
 270007,KE,2022-04-07,Free,False
 270008,IN,2022-04-07,Free,False
-270009,US,2022-04-07,Free,False
+270009,US,2022-04-07,Annual,True
 270010,US,2022-04-07,Free,False
 270011,DZ,2022-04-07,Free,False
 270012,US,2022-04-07,Free,False
@@ -10978,7 +10978,7 @@ student_id,student_country,date_registered,purchase_type,paid
 270100,NG,2022-04-08,Free,False
 270101,TW,2022-04-08,Free,False
 270102,KE,2022-04-08,Free,False
-270103,GB,2022-04-08,Free,False
+270103,GB,2022-04-08,Annual,True
 270104,PK,2022-04-08,Free,False
 270105,TR,2022-04-08,Free,False
 270106,EG,2022-04-08,Free,False
@@ -11047,11 +11047,11 @@ student_id,student_country,date_registered,purchase_type,paid
 270172,AO,2022-04-09,Free,False
 270173,IN,2022-04-09,Free,False
 270174,IN,2022-04-09,Free,False
-270175,US,2022-04-09,Free,False
+270175,US,2022-04-09,Monthly,True
 270176,NZ,2022-04-09,Free,False
 270177,IE,2022-04-09,Free,False
 270178,IN,2022-04-09,Free,False
-270179,IN,2022-04-09,Free,False
+270179,IN,2022-04-09,Monthly,True
 270180,HT,2022-04-09,Free,False
 270181,BG,2022-04-09,Free,False
 270182,MY,2022-04-09,Free,False
@@ -11059,7 +11059,7 @@ student_id,student_country,date_registered,purchase_type,paid
 270184,IN,2022-04-09,Free,False
 270185,GB,2022-04-09,Free,False
 270186,PK,2022-04-09,Free,False
-270188,GB,2022-04-09,Free,False
+270188,GB,2022-04-09,Annual,True
 270189,AZ,2022-04-09,Free,False
 270190,NG,2022-04-09,Free,False
 270191,US,2022-04-09,Free,False
@@ -11373,7 +11373,7 @@ student_id,student_country,date_registered,purchase_type,paid
 270513,IN,2022-04-12,Free,False
 270514,CA,2022-04-12,Free,False
 270516,US,2022-04-12,Free,False
-270517,US,2022-04-12,Free,False
+270517,US,2022-04-12,Monthly,True
 270518,US,2022-04-12,Annual,True
 270520,US,2022-04-12,Free,False
 270521,CL,2022-04-12,Free,False
@@ -11469,7 +11469,7 @@ student_id,student_country,date_registered,purchase_type,paid
 270613,GB,2022-04-12,Free,False
 270614,GB,2022-04-13,Free,False
 270615,IN,2022-04-13,Free,False
-270616,US,2022-04-13,Free,False
+270616,US,2022-04-13,Monthly,True
 270617,US,2022-04-13,Free,False
 270619,US,2022-04-13,Free,False
 270620,US,2022-04-13,Free,False
@@ -11651,7 +11651,7 @@ student_id,student_country,date_registered,purchase_type,paid
 270808,US,2022-04-14,Free,False
 270809,MA,2022-04-14,Free,False
 270810,IN,2022-04-14,Free,False
-270811,US,2022-04-14,Free,False
+270811,US,2022-04-14,Monthly,True
 270812,AR,2022-04-14,Free,False
 270813,IN,2022-04-14,Free,False
 270814,US,2022-04-14,Free,False
@@ -11664,7 +11664,7 @@ student_id,student_country,date_registered,purchase_type,paid
 270821,TN,2022-04-14,Free,False
 270822,US,2022-04-14,Free,False
 270823,OM,2022-04-14,Free,False
-270824,US,2022-04-14,Free,False
+270824,US,2022-04-14,Monthly,True
 270825,GB,2022-04-14,Free,False
 270826,SG,2022-04-14,Free,False
 270827,IE,2022-04-14,Free,False
@@ -12144,7 +12144,7 @@ student_id,student_country,date_registered,purchase_type,paid
 271323,US,2022-04-19,Free,False
 271324,US,2022-04-19,Free,False
 271325,EG,2022-04-19,Free,False
-271326,US,2022-04-19,Free,False
+271326,US,2022-04-19,Annual,True
 271327,IN,2022-04-19,Free,False
 271328,GB,2022-04-19,Free,False
 271329,US,2022-04-19,Free,False
@@ -12156,7 +12156,7 @@ student_id,student_country,date_registered,purchase_type,paid
 271335,NG,2022-04-19,Free,False
 271336,IN,2022-04-20,Free,False
 271337,US,2022-04-20,Free,False
-271338,US,2022-04-20,Free,False
+271338,US,2022-04-20,Annual,True
 271339,CA,2022-04-20,Free,False
 271340,AU,2022-04-20,Free,False
 271341,US,2022-04-20,Free,False
@@ -12277,7 +12277,7 @@ student_id,student_country,date_registered,purchase_type,paid
 271462,IN,2022-04-21,Free,False
 271463,US,2022-04-21,Free,False
 271464,ZW,2022-04-21,Free,False
-271465,IT,2022-04-21,Free,False
+271465,IT,2022-04-21,Monthly,True
 271466,IN,2022-04-21,Free,False
 271467,IN,2022-04-21,Free,False
 271468,PK,2022-04-21,Free,False
@@ -12751,7 +12751,7 @@ student_id,student_country,date_registered,purchase_type,paid
 271947,PK,2022-04-25,Free,False
 271948,TN,2022-04-25,Free,False
 271949,US,2022-04-25,Free,False
-271950,US,2022-04-26,Free,False
+271950,US,2022-04-26,Monthly,True
 271951,US,2022-04-26,Annual,True
 271952,IN,2022-04-26,Free,False
 271953,IN,2022-04-26,Free,False
@@ -12943,7 +12943,7 @@ student_id,student_country,date_registered,purchase_type,paid
 272154,CA,2022-04-27,Free,False
 272155,IN,2022-04-27,Free,False
 272156,IN,2022-04-27,Free,False
-272157,NL,2022-04-27,Free,False
+272157,NL,2022-04-27,Monthly,True
 272158,BD,2022-04-27,Free,False
 272159,GB,2022-04-27,Free,False
 272160,IN,2022-04-27,Free,False
@@ -13045,7 +13045,7 @@ student_id,student_country,date_registered,purchase_type,paid
 272257,ID,2022-04-28,Free,False
 272258,ZA,2022-04-28,Free,False
 272259,ZA,2022-04-28,Free,False
-272261,PT,2022-04-28,Free,False
+272261,PT,2022-04-28,Annual,True
 272262,PH,2022-04-28,Free,False
 272264,BD,2022-04-28,Free,False
 272265,US,2022-04-28,Free,False
@@ -13251,7 +13251,7 @@ student_id,student_country,date_registered,purchase_type,paid
 272469,RU,2022-04-30,Free,False
 272470,AO,2022-04-30,Free,False
 272471,FR,2022-04-30,Free,False
-272472,GB,2022-04-30,Free,False
+272472,GB,2022-04-30,Annual,True
 272473,NG,2022-04-30,Free,False
 272474,PK,2022-04-30,Free,False
 272475,US,2022-04-30,Free,False
@@ -13471,7 +13471,7 @@ student_id,student_country,date_registered,purchase_type,paid
 272693,GB,2022-05-03,Free,False
 272694,NG,2022-05-03,Free,False
 272695,US,2022-05-03,Free,False
-272696,NL,2022-05-03,Free,False
+272696,NL,2022-05-03,Quarterly,True
 272697,US,2022-05-03,Free,False
 272699,KZ,2022-05-03,Free,False
 272700,GB,2022-05-03,Free,False
@@ -13732,7 +13732,7 @@ student_id,student_country,date_registered,purchase_type,paid
 272962,SA,2022-05-06,Free,False
 272963,FR,2022-05-06,Free,False
 272964,CA,2022-05-06,Free,False
-272965,US,2022-05-06,Free,False
+272965,US,2022-05-06,Annual,True
 272966,CZ,2022-05-06,Free,False
 272967,US,2022-05-06,Free,False
 272968,CA,2022-05-06,Free,False
@@ -13744,7 +13744,7 @@ student_id,student_country,date_registered,purchase_type,paid
 272974,US,2022-05-06,Free,False
 272975,NG,2022-05-06,Free,False
 272976,CA,2022-05-06,Free,False
-272977,US,2022-05-06,Free,False
+272977,US,2022-05-06,Monthly,True
 272978,PT,2022-05-06,Free,False
 272979,US,2022-05-06,Free,False
 272980,NP,2022-05-06,Free,False
@@ -14408,7 +14408,7 @@ student_id,student_country,date_registered,purchase_type,paid
 273668,KH,2022-05-12,Free,False
 273669,BG,2022-05-12,Free,False
 273670,IN,2022-05-12,Free,False
-273671,SE,2022-05-12,Free,False
+273671,SE,2022-05-12,Annual,True
 273672,DZ,2022-05-12,Free,False
 273673,KE,2022-05-12,Free,False
 273674,IN,2022-05-12,Free,False
@@ -14894,7 +14894,7 @@ student_id,student_country,date_registered,purchase_type,paid
 274163,CA,2022-05-16,Annual,True
 274164,ZA,2022-05-16,Free,False
 274165,NG,2022-05-16,Free,False
-274166,US,2022-05-16,Free,False
+274166,US,2022-05-16,Quarterly,True
 274167,BR,2022-05-16,Free,False
 274168,TR,2022-05-16,Free,False
 274169,BR,2022-05-16,Free,False
@@ -15152,7 +15152,7 @@ student_id,student_country,date_registered,purchase_type,paid
 274430,AE,2022-05-19,Free,False
 274431,IN,2022-05-19,Free,False
 274432,IN,2022-05-19,Free,False
-274433,PK,2022-05-19,Free,False
+274433,PK,2022-05-19,Monthly,True
 274434,PK,2022-05-19,Free,False
 274435,UA,2022-05-19,Free,False
 274437,CI,2022-05-19,Free,False
@@ -15177,7 +15177,7 @@ student_id,student_country,date_registered,purchase_type,paid
 274457,IN,2022-05-19,Free,False
 274458,FR,2022-05-19,Free,False
 274459,NG,2022-05-19,Free,False
-274460,UZ,2022-05-19,Free,False
+274460,UZ,2022-05-19,Monthly,True
 274461,US,2022-05-19,Free,False
 274462,IN,2022-05-19,Free,False
 274463,UZ,2022-05-19,Free,False
@@ -15534,7 +15534,7 @@ student_id,student_country,date_registered,purchase_type,paid
 274833,GB,2022-05-23,Free,False
 274834,IN,2022-05-23,Free,False
 274835,ID,2022-05-23,Free,False
-274836,ZA,2022-05-23,Free,False
+274836,ZA,2022-05-23,Annual,True
 274837,PK,2022-05-23,Free,False
 274838,JP,2022-05-23,Annual,True
 274839,IE,2022-05-23,Free,False
@@ -15599,7 +15599,7 @@ student_id,student_country,date_registered,purchase_type,paid
 274900,TD,2022-05-24,Free,False
 274901,BD,2022-05-24,Annual,True
 274903,NL,2022-05-24,Free,False
-274904,US,2022-05-24,Free,False
+274904,US,2022-05-24,Monthly,True
 274905,IN,2022-05-24,Free,False
 274906,IT,2022-05-24,Annual,True
 274907,IN,2022-05-24,Free,False
@@ -15838,7 +15838,7 @@ student_id,student_country,date_registered,purchase_type,paid
 275155,AR,2022-05-26,Free,False
 275156,EG,2022-05-26,Free,False
 275157,US,2022-05-27,Free,False
-275158,IN,2022-05-27,Free,False
+275158,IN,2022-05-27,Monthly,True
 275159,CA,2022-05-27,Free,False
 275161,IN,2022-05-27,Free,False
 275162,CI,2022-05-27,Free,False
@@ -16055,7 +16055,7 @@ student_id,student_country,date_registered,purchase_type,paid
 275386,IN,2022-05-30,Free,False
 275387,IN,2022-05-30,Free,False
 275388,IN,2022-05-30,Free,False
-275389,US,2022-05-30,Free,False
+275389,US,2022-05-30,Monthly,True
 275390,IN,2022-05-30,Free,False
 275391,PL,2022-05-30,Free,False
 275392,IN,2022-05-30,Free,False
@@ -16126,7 +16126,7 @@ student_id,student_country,date_registered,purchase_type,paid
 275460,US,2022-05-30,Free,False
 275461,SA,2022-05-30,Annual,True
 275462,NG,2022-05-30,Free,False
-275463,CA,2022-05-30,Free,False
+275463,CA,2022-05-30,Monthly,True
 275464,US,2022-05-30,Free,False
 275465,NG,2022-05-30,Free,False
 275466,BG,2022-05-30,Free,False
@@ -16225,7 +16225,7 @@ student_id,student_country,date_registered,purchase_type,paid
 275567,BR,2022-05-31,Free,False
 275568,US,2022-05-31,Free,False
 275569,CA,2022-05-31,Free,False
-275570,US,2022-05-31,Free,False
+275570,US,2022-05-31,Monthly,True
 275571,NE,2022-05-31,Annual,True
 275572,MX,2022-05-31,Annual,True
 275573,IL,2022-05-31,Free,False
@@ -16429,7 +16429,7 @@ student_id,student_country,date_registered,purchase_type,paid
 275783,BR,2022-06-01,Free,False
 275784,US,2022-06-01,Free,False
 275785,OM,2022-06-01,Free,False
-275786,IN,2022-06-01,Free,False
+275786,IN,2022-06-01,Monthly,True
 275787,IN,2022-06-01,Free,False
 275788,US,2022-06-01,Free,False
 275789,US,2022-06-01,Free,False
@@ -17404,7 +17404,7 @@ student_id,student_country,date_registered,purchase_type,paid
 276780,BD,2022-06-06,Free,False
 276781,US,2022-06-06,Annual,True
 276783,US,2022-06-06,Free,False
-276784,US,2022-06-06,Free,False
+276784,US,2022-06-06,Monthly,True
 276785,PK,2022-06-06,Free,False
 276786,US,2022-06-06,Free,False
 276787,EG,2022-06-06,Free,False
@@ -17545,7 +17545,7 @@ student_id,student_country,date_registered,purchase_type,paid
 276929,CH,2022-06-07,Free,False
 276930,ES,2022-06-07,Free,False
 276931,IN,2022-06-07,Free,False
-276932,US,2022-06-07,Free,False
+276932,US,2022-06-07,Monthly,True
 276933,IN,2022-06-07,Free,False
 276934,IN,2022-06-07,Free,False
 276935,ID,2022-06-07,Free,False
@@ -17624,7 +17624,7 @@ student_id,student_country,date_registered,purchase_type,paid
 277009,PH,2022-06-08,Free,False
 277010,AU,2022-06-08,Free,False
 277011,AU,2022-06-08,Free,False
-277012,PH,2022-06-08,Free,False
+277012,PH,2022-06-08,Monthly,True
 277013,ID,2022-06-08,Free,False
 277014,IN,2022-06-08,Free,False
 277015,BG,2022-06-08,Free,False
@@ -17948,7 +17948,7 @@ student_id,student_country,date_registered,purchase_type,paid
 277350,CA,2022-06-10,Free,False
 277351,IN,2022-06-10,Free,False
 277352,BR,2022-06-11,Free,False
-277353,CA,2022-06-11,Free,False
+277353,CA,2022-06-11,Monthly,True
 277354,IN,2022-06-11,Free,False
 277356,IN,2022-06-11,Free,False
 277359,IN,2022-06-11,Free,False
@@ -17995,14 +17995,14 @@ student_id,student_country,date_registered,purchase_type,paid
 277400,EG,2022-06-11,Free,False
 277401,IN,2022-06-11,Free,False
 277402,TR,2022-06-11,Free,False
-277403,LK,2022-06-11,Free,False
+277403,LK,2022-06-11,Monthly,True
 277404,DE,2022-06-11,Free,False
 277405,IN,2022-06-11,Free,False
 277406,IN,2022-06-11,Free,False
 277407,PH,2022-06-11,Free,False
 277408,EG,2022-06-11,Free,False
 277409,US,2022-06-11,Free,False
-277410,IN,2022-06-11,Free,False
+277410,IN,2022-06-11,Monthly,True
 277411,AR,2022-06-11,Free,False
 277412,NG,2022-06-11,Free,False
 277413,SA,2022-06-11,Free,False
@@ -18145,7 +18145,7 @@ student_id,student_country,date_registered,purchase_type,paid
 277559,FR,2022-06-12,Free,False
 277560,BR,2022-06-12,Free,False
 277561,EG,2022-06-12,Free,False
-277562,EG,2022-06-12,Free,False
+277562,EG,2022-06-12,Monthly,True
 277563,MX,2022-06-12,Free,False
 277564,US,2022-06-12,Free,False
 277565,US,2022-06-12,Free,False
@@ -18434,9 +18434,9 @@ student_id,student_country,date_registered,purchase_type,paid
 277861,IN,2022-06-15,Free,False
 277862,IN,2022-06-15,Free,False
 277863,KR,2022-06-15,Free,False
-277864,GB,2022-06-15,Free,False
+277864,GB,2022-06-15,Annual,True
 277865,IN,2022-06-15,Free,False
-277866,IN,2022-06-15,Free,False
+277866,IN,2022-06-15,Annual,True
 277867,GB,2022-06-15,Free,False
 277868,US,2022-06-15,Free,False
 277869,IN,2022-06-15,Free,False
@@ -18514,7 +18514,7 @@ student_id,student_country,date_registered,purchase_type,paid
 277950,IT,2022-06-15,Free,False
 277951,MX,2022-06-15,Free,False
 277952,HU,2022-06-15,Free,False
-277953,US,2022-06-15,Free,False
+277953,US,2022-06-15,Monthly,True
 277954,GB,2022-06-15,Free,False
 277955,MX,2022-06-15,Free,False
 277956,CM,2022-06-15,Free,False
@@ -18613,7 +18613,7 @@ student_id,student_country,date_registered,purchase_type,paid
 278052,IN,2022-06-16,Free,False
 278053,GB,2022-06-16,Free,False
 278054,IN,2022-06-16,Free,False
-278055,ZW,2022-06-16,Free,False
+278055,ZW,2022-06-16,Monthly,True
 278056,US,2022-06-16,Free,False
 278057,QA,2022-06-16,Free,False
 278058,MA,2022-06-16,Free,False
@@ -19058,7 +19058,7 @@ student_id,student_country,date_registered,purchase_type,paid
 278506,CA,2022-06-19,Free,False
 278507,DE,2022-06-19,Free,False
 278508,ES,2022-06-19,Free,False
-278509,US,2022-06-19,Free,False
+278509,US,2022-06-19,Monthly,True
 278510,NG,2022-06-19,Free,False
 278511,EG,2022-06-19,Free,False
 278512,EG,2022-06-19,Free,False
@@ -19336,8 +19336,8 @@ student_id,student_country,date_registered,purchase_type,paid
 278785,IN,2022-06-21,Free,False
 278786,CA,2022-06-21,Free,False
 278787,IN,2022-06-21,Free,False
-278788,US,2022-06-21,Free,False
-278789,US,2022-06-21,Free,False
+278788,US,2022-06-21,Monthly,True
+278789,US,2022-06-21,Monthly,True
 278790,EG,2022-06-21,Free,False
 278791,EG,2022-06-21,Free,False
 278792,IN,2022-06-21,Free,False
@@ -19400,7 +19400,7 @@ student_id,student_country,date_registered,purchase_type,paid
 278850,US,2022-06-22,Free,False
 278851,EG,2022-06-22,Annual,True
 278852,US,2022-06-22,Free,False
-278853,MX,2022-06-22,Free,False
+278853,MX,2022-06-22,Monthly,True
 278854,US,2022-06-22,Free,False
 278855,LY,2022-06-22,Free,False
 278856,US,2022-06-22,Free,False
@@ -19428,7 +19428,7 @@ student_id,student_country,date_registered,purchase_type,paid
 278878,IE,2022-06-22,Free,False
 278879,BG,2022-06-22,Free,False
 278880,US,2022-06-22,Free,False
-278881,EE,2022-06-22,Free,False
+278881,EE,2022-06-22,Annual,True
 278882,US,2022-06-22,Annual,True
 278883,BG,2022-06-22,Free,False
 278884,IN,2022-06-22,Free,False
@@ -19437,7 +19437,7 @@ student_id,student_country,date_registered,purchase_type,paid
 278887,NG,2022-06-22,Free,False
 278888,ZW,2022-06-22,Free,False
 278889,MA,2022-06-22,Free,False
-278890,DE,2022-06-22,Free,False
+278890,DE,2022-06-22,Annual,True
 278891,NL,2022-06-22,Free,False
 278892,EG,2022-06-22,Free,False
 278893,IN,2022-06-22,Free,False
@@ -19542,7 +19542,7 @@ student_id,student_country,date_registered,purchase_type,paid
 278992,IN,2022-06-23,Free,False
 278993,DE,2022-06-23,Free,False
 278994,HK,2022-06-23,Free,False
-278995,NL,2022-06-23,Free,False
+278995,NL,2022-06-23,Monthly,True
 278996,MA,2022-06-23,Free,False
 278997,EG,2022-06-23,Free,False
 278998,IN,2022-06-23,Free,False
@@ -19946,7 +19946,7 @@ student_id,student_country,date_registered,purchase_type,paid
 279401,US,2022-06-27,Free,False
 279402,GR,2022-06-27,Free,False
 279403,GB,2022-06-27,Free,False
-279404,IN,2022-06-27,Free,False
+279404,IN,2022-06-27,Monthly,True
 279405,BD,2022-06-27,Free,False
 279406,MA,2022-06-27,Free,False
 279407,AO,2022-06-27,Free,False
@@ -20039,7 +20039,7 @@ student_id,student_country,date_registered,purchase_type,paid
 279505,EG,2022-06-27,Free,False
 279506,EG,2022-06-27,Free,False
 279507,PT,2022-06-27,Free,False
-279508,US,2022-06-28,Free,False
+279508,US,2022-06-28,Monthly,True
 279509,US,2022-06-28,Free,False
 279510,GB,2022-06-28,Free,False
 279511,US,2022-06-28,Free,False
@@ -20261,7 +20261,7 @@ student_id,student_country,date_registered,purchase_type,paid
 279733,IL,2022-06-29,Free,False
 279734,US,2022-06-29,Free,False
 279735,IN,2022-06-29,Annual,True
-279738,EC,2022-06-29,Free,False
+279738,EC,2022-06-29,Quarterly,True
 279739,CA,2022-06-29,Free,False
 279740,DE,2022-06-29,Free,False
 279741,US,2022-06-29,Free,False
@@ -20829,7 +20829,7 @@ student_id,student_country,date_registered,purchase_type,paid
 280321,EG,2022-07-04,Free,False
 280322,DE,2022-07-04,Free,False
 280323,ZA,2022-07-04,Free,False
-280324,US,2022-07-04,Free,False
+280324,US,2022-07-04,Monthly,True
 280325,AU,2022-07-04,Free,False
 280326,IE,2022-07-04,Free,False
 280327,ID,2022-07-04,Free,False
@@ -20877,7 +20877,7 @@ student_id,student_country,date_registered,purchase_type,paid
 280369,SG,2022-07-05,Free,False
 280370,US,2022-07-05,Free,False
 280371,IN,2022-07-05,Free,False
-280372,EG,2022-07-05,Free,False
+280372,EG,2022-07-05,Monthly,True
 280373,NZ,2022-07-05,Annual,True
 280374,IN,2022-07-05,Free,False
 280375,PK,2022-07-05,Free,False
@@ -20962,7 +20962,7 @@ student_id,student_country,date_registered,purchase_type,paid
 280458,GB,2022-07-05,Annual,True
 280459,AZ,2022-07-05,Free,False
 280460,FR,2022-07-05,Free,False
-280461,GB,2022-07-05,Free,False
+280461,GB,2022-07-05,Quarterly,True
 280462,CA,2022-07-05,Free,False
 280463,PT,2022-07-05,Free,False
 280464,IT,2022-07-05,Free,False
@@ -21046,12 +21046,12 @@ student_id,student_country,date_registered,purchase_type,paid
 280543,EG,2022-07-06,Free,False
 280545,US,2022-07-06,Annual,True
 280546,ID,2022-07-06,Free,False
-280547,US,2022-07-06,Free,False
+280547,US,2022-07-06,Monthly,True
 280548,SA,2022-07-06,Free,False
 280549,US,2022-07-06,Free,False
 280550,VN,2022-07-06,Free,False
 280551,IN,2022-07-06,Free,False
-280552,CA,2022-07-06,Free,False
+280552,CA,2022-07-06,Annual,True
 280553,PK,2022-07-06,Free,False
 280554,BD,2022-07-06,Free,False
 280555,NG,2022-07-06,Free,False
@@ -21185,7 +21185,7 @@ student_id,student_country,date_registered,purchase_type,paid
 280686,IN,2022-07-07,Free,False
 280687,GB,2022-07-07,Free,False
 280688,GB,2022-07-07,Free,False
-280689,GB,2022-07-07,Free,False
+280689,GB,2022-07-07,Monthly,True
 280690,IN,2022-07-07,Free,False
 280691,IN,2022-07-07,Free,False
 280692,BR,2022-07-07,Free,False
@@ -21342,7 +21342,7 @@ student_id,student_country,date_registered,purchase_type,paid
 280847,IN,2022-07-09,Free,False
 280848,UZ,2022-07-09,Free,False
 280849,CA,2022-07-09,Annual,True
-280850,AU,2022-07-09,Free,False
+280850,AU,2022-07-09,Monthly,True
 280851,IN,2022-07-09,Free,False
 280852,PK,2022-07-09,Free,False
 280853,ID,2022-07-09,Annual,True
@@ -21683,7 +21683,7 @@ student_id,student_country,date_registered,purchase_type,paid
 281193,NG,2022-07-11,Free,False
 281194,PK,2022-07-11,Free,False
 281195,NG,2022-07-11,Free,False
-281196,US,2022-07-11,Free,False
+281196,US,2022-07-11,Monthly,True
 281197,CM,2022-07-11,Free,False
 281198,EG,2022-07-11,Free,False
 281199,NG,2022-07-11,Free,False
@@ -21778,7 +21778,7 @@ student_id,student_country,date_registered,purchase_type,paid
 281291,US,2022-07-12,Free,False
 281292,FR,2022-07-12,Free,False
 281293,PE,2022-07-12,Free,False
-281294,FR,2022-07-12,Free,False
+281294,FR,2022-07-12,Monthly,True
 281295,US,2022-07-12,Free,False
 281296,US,2022-07-12,Free,False
 281297,US,2022-07-12,Free,False
@@ -22224,7 +22224,7 @@ student_id,student_country,date_registered,purchase_type,paid
 281750,IN,2022-07-16,Free,False
 281751,CA,2022-07-16,Free,False
 281752,NG,2022-07-16,Free,False
-281753,US,2022-07-16,Free,False
+281753,US,2022-07-16,Monthly,True
 281754,IT,2022-07-16,Free,False
 281755,EG,2022-07-16,Free,False
 281756,PK,2022-07-16,Free,False
@@ -22240,7 +22240,7 @@ student_id,student_country,date_registered,purchase_type,paid
 281766,US,2022-07-16,Free,False
 281767,TZ,2022-07-16,Free,False
 281768,IN,2022-07-16,Free,False
-281769,US,2022-07-16,Free,False
+281769,US,2022-07-16,Monthly,True
 281770,EG,2022-07-16,Free,False
 281771,BE,2022-07-16,Free,False
 281772,PT,2022-07-16,Free,False
@@ -22267,13 +22267,13 @@ student_id,student_country,date_registered,purchase_type,paid
 281793,NG,2022-07-16,Free,False
 281794,DE,2022-07-16,Free,False
 281795,US,2022-07-16,Free,False
-281796,IN,2022-07-16,Free,False
+281796,IN,2022-07-16,Monthly,True
 281797,IT,2022-07-16,Free,False
 281798,JO,2022-07-16,Free,False
 281799,SA,2022-07-16,Free,False
 281800,US,2022-07-16,Free,False
 281801,IT,2022-07-16,Free,False
-281802,EG,2022-07-16,Free,False
+281802,EG,2022-07-16,Monthly,True
 281803,EG,2022-07-16,Free,False
 281804,CA,2022-07-17,Free,False
 281805,ID,2022-07-17,Free,False
@@ -22935,7 +22935,7 @@ student_id,student_country,date_registered,purchase_type,paid
 282504,FR,2022-07-24,Annual,True
 282505,US,2022-07-24,Free,False
 282506,DE,2022-07-24,Free,False
-282507,NG,2022-07-24,Free,False
+282507,NG,2022-07-24,Quarterly,True
 282509,US,2022-07-24,Free,False
 282510,CO,2022-07-24,Free,False
 282511,IN,2022-07-24,Free,False
@@ -23056,7 +23056,7 @@ student_id,student_country,date_registered,purchase_type,paid
 282635,ID,2022-07-26,Free,False
 282636,LK,2022-07-26,Free,False
 282637,US,2022-07-26,Annual,True
-282638,MY,2022-07-26,Free,False
+282638,MY,2022-07-26,Monthly,True
 282639,IN,2022-07-26,Free,False
 282640,US,2022-07-26,Annual,True
 282641,GB,2022-07-26,Free,False
@@ -23135,7 +23135,7 @@ student_id,student_country,date_registered,purchase_type,paid
 282716,IN,2022-07-26,Free,False
 282717,EG,2022-07-26,Free,False
 282719,US,2022-07-26,Free,False
-282720,US,2022-07-26,Free,False
+282720,US,2022-07-26,Monthly,True
 282721,BG,2022-07-26,Free,False
 282722,US,2022-07-26,Free,False
 282723,GR,2022-07-26,Free,False
@@ -23330,7 +23330,7 @@ student_id,student_country,date_registered,purchase_type,paid
 282926,US,2022-07-29,Annual,True
 282927,US,2022-07-29,Free,False
 282928,EG,2022-07-29,Free,False
-282929,MY,2022-07-29,Free,False
+282929,MY,2022-07-29,Annual,True
 282930,IN,2022-07-29,Free,False
 282931,NZ,2022-07-29,Annual,True
 282932,US,2022-07-29,Free,False
@@ -23355,7 +23355,7 @@ student_id,student_country,date_registered,purchase_type,paid
 282951,IN,2022-07-29,Free,False
 282952,IN,2022-07-29,Free,False
 282953,TR,2022-07-29,Free,False
-282954,US,2022-07-29,Free,False
+282954,US,2022-07-29,Monthly,True
 282955,DE,2022-07-29,Free,False
 282956,ZA,2022-07-29,Annual,True
 282957,VN,2022-07-29,Free,False
@@ -23376,7 +23376,7 @@ student_id,student_country,date_registered,purchase_type,paid
 282974,US,2022-07-29,Free,False
 282975,PK,2022-07-29,Free,False
 282976,IN,2022-07-29,Free,False
-282977,IN,2022-07-29,Free,False
+282977,IN,2022-07-29,Annual,True
 282978,SE,2022-07-29,Free,False
 282979,TR,2022-07-29,Free,False
 282980,SA,2022-07-29,Free,False
@@ -23748,7 +23748,7 @@ student_id,student_country,date_registered,purchase_type,paid
 283354,DZ,2022-08-01,Free,False
 283355,PT,2022-08-01,Free,False
 283356,BG,2022-08-01,Free,False
-283357,DE,2022-08-01,Free,False
+283357,DE,2022-08-01,Monthly,True
 283358,AZ,2022-08-01,Free,False
 283359,AZ,2022-08-01,Free,False
 283360,IN,2022-08-01,Free,False
@@ -23847,7 +23847,7 @@ student_id,student_country,date_registered,purchase_type,paid
 283453,IE,2022-08-01,Free,False
 283454,US,2022-08-01,Free,False
 283455,CA,2022-08-01,Free,False
-283456,CA,2022-08-01,Free,False
+283456,CA,2022-08-01,Monthly,True
 283457,IE,2022-08-01,Free,False
 283458,CA,2022-08-01,Free,False
 283459,IN,2022-08-01,Free,False
@@ -24235,7 +24235,7 @@ student_id,student_country,date_registered,purchase_type,paid
 283851,PL,2022-08-04,Free,False
 283852,IN,2022-08-04,Free,False
 283853,TJ,2022-08-04,Free,False
-283854,IN,2022-08-04,Free,False
+283854,IN,2022-08-04,Monthly,True
 283855,EG,2022-08-04,Free,False
 283856,IN,2022-08-04,Free,False
 283857,IN,2022-08-04,Free,False
@@ -24266,7 +24266,7 @@ student_id,student_country,date_registered,purchase_type,paid
 283884,IT,2022-08-04,Free,False
 283885,NG,2022-08-04,Free,False
 283886,IT,2022-08-04,Free,False
-283887,DE,2022-08-04,Free,False
+283887,DE,2022-08-04,Monthly,True
 283888,NG,2022-08-04,Free,False
 283889,IN,2022-08-04,Free,False
 283890,TT,2022-08-04,Free,False
@@ -24557,7 +24557,7 @@ student_id,student_country,date_registered,purchase_type,paid
 284177,US,2022-08-06,Free,False
 284178,IN,2022-08-06,Free,False
 284179,US,2022-08-06,Free,False
-284180,RS,2022-08-06,Free,False
+284180,RS,2022-08-06,Monthly,True
 284181,IT,2022-08-06,Free,False
 284182,GB,2022-08-06,Free,False
 284183,IN,2022-08-06,Free,False
@@ -24789,7 +24789,7 @@ student_id,student_country,date_registered,purchase_type,paid
 284412,ZA,2022-08-08,Free,False
 284413,DE,2022-08-08,Free,False
 284414,GB,2022-08-08,Free,False
-284415,US,2022-08-08,Free,False
+284415,US,2022-08-08,Monthly,True
 284416,IN,2022-08-08,Free,False
 284417,IN,2022-08-08,Free,False
 284418,US,2022-08-08,Free,False
@@ -24855,7 +24855,7 @@ student_id,student_country,date_registered,purchase_type,paid
 284479,US,2022-08-08,Free,False
 284480,CO,2022-08-08,Free,False
 284481,US,2022-08-08,Free,False
-284482,US,2022-08-08,Free,False
+284482,US,2022-08-08,Annual,True
 284483,CA,2022-08-08,Free,False
 284484,CA,2022-08-08,Free,False
 284485,ID,2022-08-08,Free,False
@@ -24865,7 +24865,7 @@ student_id,student_country,date_registered,purchase_type,paid
 284489,GB,2022-08-09,Free,False
 284490,RS,2022-08-09,Free,False
 284491,AU,2022-08-09,Free,False
-284492,CA,2022-08-09,Free,False
+284492,CA,2022-08-09,Annual,True
 284493,US,2022-08-09,Free,False
 284494,EG,2022-08-09,Free,False
 284495,IN,2022-08-09,Free,False
@@ -24885,7 +24885,7 @@ student_id,student_country,date_registered,purchase_type,paid
 284509,GB,2022-08-09,Free,False
 284510,IN,2022-08-09,Free,False
 284511,FI,2022-08-09,Free,False
-284512,US,2022-08-09,Free,False
+284512,US,2022-08-09,Monthly,True
 284513,IN,2022-08-09,Free,False
 284514,IN,2022-08-09,Free,False
 284515,US,2022-08-09,Free,False
@@ -25005,7 +25005,7 @@ student_id,student_country,date_registered,purchase_type,paid
 284630,US,2022-08-10,Free,False
 284631,US,2022-08-10,Free,False
 284632,SG,2022-08-10,Free,False
-284633,US,2022-08-10,Free,False
+284633,US,2022-08-10,Monthly,True
 284634,GB,2022-08-10,Free,False
 284635,ID,2022-08-10,Free,False
 284636,AT,2022-08-10,Free,False
@@ -25320,7 +25320,7 @@ student_id,student_country,date_registered,purchase_type,paid
 284951,CO,2022-08-11,Free,False
 284952,BR,2022-08-11,Free,False
 284953,CO,2022-08-11,Free,False
-284954,IT,2022-08-11,Free,False
+284954,IT,2022-08-11,Monthly,True
 284955,IN,2022-08-11,Free,False
 284956,TN,2022-08-11,Free,False
 284957,DZ,2022-08-11,Free,False
@@ -25409,7 +25409,7 @@ student_id,student_country,date_registered,purchase_type,paid
 285041,IN,2022-08-12,Free,False
 285042,ES,2022-08-12,Free,False
 285043,IN,2022-08-12,Free,False
-285044,CA,2022-08-12,Free,False
+285044,CA,2022-08-12,Monthly,True
 285045,CA,2022-08-12,Free,False
 285046,US,2022-08-12,Free,False
 285047,GB,2022-08-12,Free,False
@@ -25681,7 +25681,7 @@ student_id,student_country,date_registered,purchase_type,paid
 285319,GB,2022-08-13,Free,False
 285320,ZM,2022-08-13,Free,False
 285321,GB,2022-08-13,Free,False
-285322,MX,2022-08-13,Free,False
+285322,MX,2022-08-13,Annual,True
 285323,AU,2022-08-13,Free,False
 285324,DE,2022-08-13,Free,False
 285325,EG,2022-08-13,Free,False
@@ -26262,7 +26262,7 @@ student_id,student_country,date_registered,purchase_type,paid
 285912,EG,2022-08-15,Free,False
 285913,EG,2022-08-15,Free,False
 285914,LB,2022-08-15,Free,False
-285915,HK,2022-08-15,Free,False
+285915,HK,2022-08-15,Monthly,True
 285916,IN,2022-08-15,Free,False
 285917,EG,2022-08-15,Free,False
 285918,SG,2022-08-15,Free,False
@@ -27164,7 +27164,7 @@ student_id,student_country,date_registered,purchase_type,paid
 286823,VN,2022-08-17,Free,False
 286824,ZW,2022-08-17,Free,False
 286825,PK,2022-08-17,Free,False
-286826,PL,2022-08-17,Free,False
+286826,PL,2022-08-17,Monthly,True
 286827,LB,2022-08-17,Free,False
 286828,EG,2022-08-17,Free,False
 286829,IT,2022-08-17,Free,False
@@ -27172,7 +27172,7 @@ student_id,student_country,date_registered,purchase_type,paid
 286831,NL,2022-08-17,Free,False
 286832,IN,2022-08-17,Free,False
 286833,US,2022-08-17,Free,False
-286834,NL,2022-08-17,Free,False
+286834,NL,2022-08-17,Monthly,True
 286835,UA,2022-08-17,Free,False
 286836,NG,2022-08-17,Free,False
 286837,NG,2022-08-17,Free,False
@@ -27222,7 +27222,7 @@ student_id,student_country,date_registered,purchase_type,paid
 286881,US,2022-08-17,Free,False
 286882,SA,2022-08-17,Free,False
 286883,DO,2022-08-17,Free,False
-286884,US,2022-08-17,Free,False
+286884,US,2022-08-17,Monthly,True
 286885,PK,2022-08-17,Free,False
 286886,EG,2022-08-17,Free,False
 286887,IN,2022-08-17,Free,False
@@ -27342,7 +27342,7 @@ student_id,student_country,date_registered,purchase_type,paid
 287003,IN,2022-08-18,Free,False
 287004,NL,2022-08-18,Free,False
 287005,KE,2022-08-18,Free,False
-287006,US,2022-08-18,Free,False
+287006,US,2022-08-18,Annual,True
 287007,IN,2022-08-18,Free,False
 287008,US,2022-08-18,Free,False
 287009,US,2022-08-18,Free,False
@@ -27475,7 +27475,7 @@ student_id,student_country,date_registered,purchase_type,paid
 287140,SE,2022-08-18,Free,False
 287141,BR,2022-08-18,Free,False
 287142,IN,2022-08-18,Free,False
-287143,US,2022-08-18,Free,False
+287143,US,2022-08-18,Monthly,True
 287144,IN,2022-08-18,Free,False
 287145,FR,2022-08-18,Free,False
 287146,US,2022-08-18,Free,False
@@ -27490,7 +27490,7 @@ student_id,student_country,date_registered,purchase_type,paid
 287155,MX,2022-08-18,Free,False
 287156,TR,2022-08-18,Free,False
 287157,EG,2022-08-18,Free,False
-287158,US,2022-08-18,Free,False
+287158,US,2022-08-18,Monthly,True
 287159,NG,2022-08-18,Free,False
 287160,MZ,2022-08-18,Free,False
 287161,NG,2022-08-18,Free,False
@@ -27802,7 +27802,7 @@ student_id,student_country,date_registered,purchase_type,paid
 287475,EG,2022-08-21,Free,False
 287476,EG,2022-08-21,Free,False
 287477,GB,2022-08-21,Free,False
-287478,OM,2022-08-21,Free,False
+287478,OM,2022-08-21,Monthly,True
 287479,SA,2022-08-21,Free,False
 287480,EG,2022-08-21,Free,False
 287481,KE,2022-08-21,Free,False
@@ -28243,7 +28243,7 @@ student_id,student_country,date_registered,purchase_type,paid
 287923,EG,2022-08-24,Free,False
 287924,GB,2022-08-24,Free,False
 287925,EG,2022-08-24,Free,False
-287926,US,2022-08-24,Free,False
+287926,US,2022-08-24,Monthly,True
 287927,IN,2022-08-24,Free,False
 287928,TR,2022-08-24,Free,False
 287929,JM,2022-08-24,Free,False
@@ -28292,7 +28292,7 @@ student_id,student_country,date_registered,purchase_type,paid
 287972,MZ,2022-08-25,Free,False
 287973,ID,2022-08-25,Free,False
 287974,IN,2022-08-25,Free,False
-287975,IN,2022-08-25,Free,False
+287975,IN,2022-08-25,Monthly,True
 287976,DE,2022-08-25,Free,False
 287977,FR,2022-08-25,Free,False
 287978,NG,2022-08-25,Free,False
@@ -28319,7 +28319,7 @@ student_id,student_country,date_registered,purchase_type,paid
 288000,BD,2022-08-25,Free,False
 288001,IN,2022-08-25,Free,False
 288002,IN,2022-08-25,Free,False
-288003,ZA,2022-08-25,Free,False
+288003,ZA,2022-08-25,Monthly,True
 288004,ES,2022-08-25,Free,False
 288005,RO,2022-08-25,Free,False
 288006,ES,2022-08-25,Free,False
@@ -28456,7 +28456,7 @@ student_id,student_country,date_registered,purchase_type,paid
 288138,IN,2022-08-26,Free,False
 288140,DE,2022-08-26,Annual,True
 288141,PT,2022-08-26,Free,False
-288142,DE,2022-08-26,Free,False
+288142,DE,2022-08-26,Monthly,True
 288143,IN,2022-08-26,Free,False
 288144,GB,2022-08-26,Free,False
 288145,ES,2022-08-26,Free,False
@@ -28606,7 +28606,7 @@ student_id,student_country,date_registered,purchase_type,paid
 288312,US,2022-08-27,Free,False
 288313,ID,2022-08-27,Free,False
 288314,DZ,2022-08-27,Free,False
-288315,US,2022-08-27,Free,False
+288315,US,2022-08-27,Annual,True
 288316,IN,2022-08-27,Free,False
 288317,BR,2022-08-27,Free,False
 288318,ID,2022-08-27,Free,False
@@ -28917,7 +28917,7 @@ student_id,student_country,date_registered,purchase_type,paid
 288634,US,2022-08-29,Free,False
 288635,MX,2022-08-29,Free,False
 288636,NG,2022-08-29,Free,False
-288637,PK,2022-08-29,Free,False
+288637,PK,2022-08-29,Monthly,True
 288638,BR,2022-08-29,Free,False
 288639,CA,2022-08-29,Free,False
 288640,US,2022-08-30,Free,False
@@ -29069,7 +29069,7 @@ student_id,student_country,date_registered,purchase_type,paid
 288790,PH,2022-08-30,Free,False
 288791,FI,2022-08-30,Annual,True
 288792,AE,2022-08-30,Free,False
-288793,PT,2022-08-30,Free,False
+288793,PT,2022-08-30,Monthly,True
 288794,EG,2022-08-30,Free,False
 288795,NG,2022-08-30,Free,False
 288796,GB,2022-08-30,Free,False
@@ -29193,7 +29193,7 @@ student_id,student_country,date_registered,purchase_type,paid
 288920,DE,2022-08-31,Free,False
 288921,AR,2022-08-31,Free,False
 288922,US,2022-08-31,Free,False
-288923,KE,2022-08-31,Free,False
+288923,KE,2022-08-31,Annual,True
 288924,GB,2022-08-31,Free,False
 288925,ES,2022-08-31,Free,False
 288926,GB,2022-08-31,Free,False
@@ -29220,7 +29220,7 @@ student_id,student_country,date_registered,purchase_type,paid
 288947,EG,2022-08-31,Free,False
 288948,DE,2022-08-31,Free,False
 288949,US,2022-08-31,Free,False
-288950,US,2022-08-31,Free,False
+288950,US,2022-08-31,Monthly,True
 288951,EG,2022-08-31,Free,False
 288952,CA,2022-08-31,Free,False
 288953,US,2022-08-31,Free,False
@@ -29506,7 +29506,7 @@ student_id,student_country,date_registered,purchase_type,paid
 289241,CA,2022-09-03,Free,False
 289242,US,2022-09-03,Free,False
 289243,US,2022-09-03,Free,False
-289244,US,2022-09-03,Free,False
+289244,US,2022-09-03,Monthly,True
 289245,IN,2022-09-03,Free,False
 289246,US,2022-09-03,Free,False
 289247,GB,2022-09-03,Free,False
@@ -29773,7 +29773,7 @@ student_id,student_country,date_registered,purchase_type,paid
 289514,IN,2022-09-05,Free,False
 289515,EG,2022-09-05,Free,False
 289516,NL,2022-09-05,Free,False
-289517,PH,2022-09-05,Free,False
+289517,PH,2022-09-05,Monthly,True
 289518,IT,2022-09-05,Free,False
 289519,EG,2022-09-05,Free,False
 289520,IN,2022-09-05,Free,False
@@ -29781,7 +29781,7 @@ student_id,student_country,date_registered,purchase_type,paid
 289523,AL,2022-09-05,Free,False
 289524,KE,2022-09-05,Free,False
 289525,US,2022-09-05,Free,False
-289526,GB,2022-09-05,Free,False
+289526,GB,2022-09-05,Monthly,True
 289527,IN,2022-09-05,Free,False
 289528,IN,2022-09-05,Free,False
 289529,EG,2022-09-05,Free,False
@@ -29835,7 +29835,7 @@ student_id,student_country,date_registered,purchase_type,paid
 289577,EG,2022-09-05,Free,False
 289578,TN,2022-09-05,Free,False
 289579,BR,2022-09-05,Free,False
-289580,US,2022-09-06,Free,False
+289580,US,2022-09-06,Monthly,True
 289581,US,2022-09-06,Free,False
 289582,LY,2022-09-06,Free,False
 289583,VN,2022-09-06,Free,False
@@ -29864,7 +29864,7 @@ student_id,student_country,date_registered,purchase_type,paid
 289606,KE,2022-09-06,Free,False
 289607,SG,2022-09-06,Free,False
 289608,DE,2022-09-06,Free,False
-289609,MD,2022-09-06,Free,False
+289609,MD,2022-09-06,Monthly,True
 289610,NG,2022-09-06,Free,False
 289611,EG,2022-09-06,Free,False
 289612,AZ,2022-09-06,Free,False
@@ -30048,9 +30048,9 @@ student_id,student_country,date_registered,purchase_type,paid
 289793,MA,2022-09-07,Free,False
 289794,BD,2022-09-07,Free,False
 289795,US,2022-09-07,Free,False
-289796,US,2022-09-07,Free,False
+289796,US,2022-09-07,Monthly,True
 289797,IN,2022-09-07,Free,False
-289798,IN,2022-09-07,Free,False
+289798,IN,2022-09-07,Monthly,True
 289799,GB,2022-09-07,Free,False
 289800,IT,2022-09-07,Free,False
 289801,BD,2022-09-07,Free,False
@@ -30075,11 +30075,11 @@ student_id,student_country,date_registered,purchase_type,paid
 289820,EG,2022-09-07,Free,False
 289821,US,2022-09-07,Free,False
 289822,EG,2022-09-07,Free,False
-289823,DE,2022-09-07,Monthly,True
+289823,DE,2022-09-07,Annual,True
 289824,NG,2022-09-07,Free,False
 289825,NG,2022-09-07,Free,False
 289826,FR,2022-09-07,Free,False
-289827,PT,2022-09-07,Free,False
+289827,PT,2022-09-07,Monthly,True
 289828,BR,2022-09-07,Free,False
 289829,FR,2022-09-07,Free,False
 289830,PK,2022-09-07,Free,False
@@ -30464,7 +30464,7 @@ student_id,student_country,date_registered,purchase_type,paid
 290223,GB,2022-09-11,Free,False
 290224,BD,2022-09-11,Free,False
 290225,GB,2022-09-11,Free,False
-290226,TH,2022-09-11,Free,False
+290226,TH,2022-09-11,Monthly,True
 290227,PK,2022-09-11,Free,False
 290228,GR,2022-09-11,Free,False
 290229,IN,2022-09-11,Free,False
@@ -30675,7 +30675,7 @@ student_id,student_country,date_registered,purchase_type,paid
 290441,EG,2022-09-12,Free,False
 290442,NG,2022-09-12,Free,False
 290443,ID,2022-09-13,Free,False
-290444,BD,2022-09-13,Free,False
+290444,BD,2022-09-13,Monthly,True
 290445,NG,2022-09-13,Free,False
 290446,EG,2022-09-13,Free,False
 290447,US,2022-09-13,Free,False
@@ -30718,7 +30718,7 @@ student_id,student_country,date_registered,purchase_type,paid
 290484,MY,2022-09-13,Free,False
 290485,ID,2022-09-13,Free,False
 290486,DK,2022-09-13,Free,False
-290487,DE,2022-09-13,Free,False
+290487,DE,2022-09-13,Monthly,True
 290488,BD,2022-09-13,Free,False
 290489,PT,2022-09-13,Free,False
 290490,NG,2022-09-13,Free,False
@@ -30941,7 +30941,7 @@ student_id,student_country,date_registered,purchase_type,paid
 290716,CA,2022-09-14,Free,False
 290717,IQ,2022-09-14,Free,False
 290718,IQ,2022-09-14,Free,False
-290719,DE,2022-09-14,Free,False
+290719,DE,2022-09-14,Monthly,True
 290720,US,2022-09-14,Free,False
 290721,AE,2022-09-14,Free,False
 290722,IQ,2022-09-14,Free,False
@@ -31154,7 +31154,7 @@ student_id,student_country,date_registered,purchase_type,paid
 290942,AZ,2022-09-16,Free,False
 290943,TW,2022-09-16,Free,False
 290944,IN,2022-09-16,Free,False
-290945,NL,2022-09-16,Free,False
+290945,NL,2022-09-16,Monthly,True
 290946,IQ,2022-09-16,Free,False
 290947,IN,2022-09-16,Free,False
 290948,AZ,2022-09-16,Free,False
@@ -31372,7 +31372,7 @@ student_id,student_country,date_registered,purchase_type,paid
 291162,EG,2022-09-18,Free,False
 291163,NL,2022-09-18,Free,False
 291164,BE,2022-09-18,Free,False
-291165,TH,2022-09-18,Free,False
+291165,TH,2022-09-18,Monthly,True
 291166,AZ,2022-09-18,Free,False
 291167,AR,2022-09-18,Free,False
 291168,SG,2022-09-18,Free,False
@@ -31384,7 +31384,7 @@ student_id,student_country,date_registered,purchase_type,paid
 291174,US,2022-09-18,Free,False
 291175,GB,2022-09-18,Free,False
 291176,ES,2022-09-18,Free,False
-291177,TH,2022-09-18,Free,False
+291177,TH,2022-09-18,Monthly,True
 291178,IN,2022-09-18,Free,False
 291179,IL,2022-09-18,Free,False
 291180,EG,2022-09-18,Free,False

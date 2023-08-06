@@ -1,8 +1,11 @@
+import numpy as np
 import pandas as pd
 
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+
+from datetime import datetime
 
 
 class main_dashboard_utils:
@@ -26,9 +29,7 @@ class main_dashboard_utils:
         self.merged_student_info_purchase.date_registered = pd.to_datetime(self.merged_student_info_purchase.date_registered)
 
         self.month_names_dict = {1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June', 7: 'July', 8: 'August', 9: 'September', 10: 'October'}
-        self.countries_color_dict = dict(zip(self.get_student_country().student_country, px.colors.qualitative.Prism))
 
-    
     def get_country_list(self):
         return self.student_info_df.student_country.unique().tolist()
     
@@ -60,15 +61,22 @@ class main_dashboard_utils:
         student_country = self.merged_student_info_purchase[(self.merged_student_info_purchase.paid == user_type_option)
                                                  & (self.merged_student_info_purchase.purchase_type == subscription_type_option)
                                                  & (self.merged_student_info_purchase.student_country == country_option)]
+        
         return student_country[['student_country']].groupby('student_country').size().reset_index().sort_values(by=0, ascending=False).rename(columns={0: 'students'})
     
     def get_course_minutes_watched(self):
-        course_info_ratings = pd.merge(self.course_info_df, self.course_ratings_df[['course_id', 'course_rating']], on='course_id')
+        course_info_ratings = pd.merge(self.course_info_df,
+                                       self.course_ratings_df[['course_id', 'course_rating']],
+                                       on='course_id')
+        
         course_info_ratings = course_info_ratings.rename(columns={'course_rating': 'average_course_rating'})
         course_info_ratings['ratings'] = course_info_ratings.average_course_rating
         course_info_ratings = course_info_ratings.groupby(['course_id', 'course_title']).agg({'average_course_rating': 'mean', 'ratings': 'size'}).reset_index().round(2)
 
-        course_minutes_watched = pd.merge(course_info_ratings, self.student_learning_df[['course_id', 'minutes_watched']], on='course_id')
+        course_minutes_watched = pd.merge(course_info_ratings,
+                                          self.student_learning_df[['course_id', 'minutes_watched']],
+                                          on='course_id')
+        
         course_minutes_watched['average_minutes_watched'] = course_minutes_watched.minutes_watched
         course_minutes_watched = course_minutes_watched.groupby(['course_id', 'course_title', 'average_course_rating', 'ratings']).agg({'minutes_watched': 'sum', 'average_minutes_watched': 'mean'}).reset_index().round(2)
         course_minutes_watched = course_minutes_watched.sort_values(by='minutes_watched', ascending=False)
@@ -79,7 +87,10 @@ class main_dashboard_utils:
     def get_platform_minutes_watched(self):
         # self.student_country = self.get_student_country()
 
-        country_minutes_watched = pd.merge(self.merged_student_info_purchase, self.student_learning_df[['student_id', 'minutes_watched']], on='student_id', how='left')
+        country_minutes_watched = pd.merge(self.merged_student_info_purchase,
+                                           self.student_learning_df[['student_id', 'minutes_watched']],
+                                           on='student_id',
+                                           how='left')
 
         user_type_option, subscription_type_option, country_option = self.modify_options(country_minutes_watched)
         country_minutes_watched = country_minutes_watched[(country_minutes_watched.paid == user_type_option)
@@ -91,7 +102,10 @@ class main_dashboard_utils:
         return country_minutes_watched
     
     def get_monthly_average_minutes_watched(self):
-        monthly_average_minutes_watched = pd.merge(self.merged_student_info_purchase, self.student_learning_df, on='student_id', how='left')
+        monthly_average_minutes_watched = pd.merge(self.merged_student_info_purchase,
+                                                   self.student_learning_df,
+                                                   on='student_id',
+                                                   how='left')
 
         user_type_option, subscription_type_option, country_option = self.modify_options(monthly_average_minutes_watched)
         monthly_average_minutes_watched = monthly_average_minutes_watched[(monthly_average_minutes_watched.paid == user_type_option)
@@ -131,7 +145,10 @@ class main_dashboard_utils:
         monthly_onboarded_students = monthly_onboarded_students[['month']].groupby(['month']).size().reset_index()
         monthly_onboarded_students = monthly_onboarded_students.rename(columns={0: 'onboarded'})
 
-        students_registered_onboarded = pd.merge(monthly_registered_students, monthly_onboarded_students, on='month')
+        students_registered_onboarded = pd.merge(monthly_registered_students,
+                                                 monthly_onboarded_students,
+                                                 on='month')
+        
         students_registered_onboarded.month = students_registered_onboarded.month.map(self.month_names_dict)
 
         return students_registered_onboarded
@@ -139,17 +156,15 @@ class main_dashboard_utils:
     def plot_top_largest_number_of_users(self):
         student_country = self.get_student_country()
 
-        plot = px.bar(student_country.head(),
+        return px.bar(student_country.head(),
                       x='students',
                       y='student_country',
                       orientation='h',
                       color='student_country',
-                      title='Top Countries with the Most Amount of Students',
+                      title='Top Countries with the Most Number of Students',
                       labels={'students': 'Students', 'student_country': 'Student Country'},    
                       color_discrete_sequence=px.colors.qualitative.Prism)
         
-        return plot
-    
     def plot_minutes_watched_by_country(self):
         platform_minutes_watched = self.get_platform_minutes_watched()
 
@@ -158,7 +173,7 @@ class main_dashboard_utils:
                       y='student_country',
                       orientation='h',
                       color='student_country',
-                      title='Minutes Watched on the Platform by Country',
+                      title='Amount of Minutes Watched on the Platform by Country',
                       labels={'minutes_watched': 'Minutes Watched', 'student_country': 'Student Country'},
                       color_discrete_sequence=px.colors.qualitative.Prism)
     
@@ -231,3 +246,40 @@ class main_dashboard_utils:
     
     def get_onboarded_from_registered_kpi(self):
         return round(self.student_engagement_df.student_id.nunique() / self.student_info_df.student_id.nunique(), 3) * 100
+    
+    def prepare_dashboard_helper_dataframe(self):
+        self.merged_student_info_purchase = pd.merge(self.student_info_df, self.student_purchases_df, on='student_id', how='left')
+        self.merged_student_info_purchase = self.merged_student_info_purchase.drop_duplicates(subset='student_id', keep='last')
+
+        self.merged_student_info_purchase['latest_date_recorded'] = datetime(2022, 10, 20).date()
+        self.merged_student_info_purchase.latest_date_recorded = pd.to_datetime(self.merged_student_info_purchase.latest_date_recorded)
+
+        self.merged_student_info_purchase['days'] = (self.merged_student_info_purchase.latest_date_recorded - self.merged_student_info_purchase.date_purchased).dt.days
+
+        self.merged_student_info_purchase['paid'] = self.merged_student_info_purchase.student_id.map(self.is_paid_tier)
+        self.merged_student_info_purchase.purchase_type = self.merged_student_info_purchase.apply(lambda cols : self.replace_purchase_type(cols.paid, cols.purchase_type), axis=1)
+
+        self.merged_student_info_purchase = self.merged_student_info_purchase.drop(['date_purchased', 'purchase_id', 'latest_date_recorded', 'days'], axis=1)
+
+        self.merged_student_info_purchase.to_csv('data/processed/merged_student_info_purchase.csv', index=False)
+
+    def is_paid_tier(self, student_id: str):
+        df = self.merged_student_info_purchase[self.merged_student_info_purchase.student_id == student_id]
+
+        days = df.days.iloc[0]
+        purchase_type = df.purchase_type.iloc[0]
+
+        if np.isnan(days):
+            return False
+
+        if purchase_type == 'Monthly':
+            return days <= 30
+        if purchase_type == 'Quarterly':
+            return days <= 90
+        if purchase_type == 'Annual':
+            return days <= 365
+
+    def replace_purchase_type(self, paid: bool, purchase_type: str):
+            if paid == False or purchase_type == np.nan:
+                return 'Free'
+            return purchase_type
