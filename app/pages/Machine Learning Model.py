@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 
+import pickle
+
 
 st.set_page_config(page_title='Machine Learning Model',
                    layout='wide',
@@ -8,35 +10,52 @@ st.set_page_config(page_title='Machine Learning Model',
 
 st.title('Machine Learning Model 🧠')
 
-ml_df = pd.read_csv('data/processed/ml_dataset.csv')
-
-# st.dataframe(ml_df)
-
 column_1 = st.columns(3, gap='large')
 
 with column_1[0]:
-    st.number_input('Days Engaged',
-                    min_value=0)
+    days_engaged_value = st.number_input('Days Engaged',
+                                             min_value=0)
 
 with column_1[1]:
-    st.number_input('Minutes Watched',
-                    min_value=0)
+    minutes_watched_value = st.number_input('Minutes Watched',
+                                                min_value=0)
 
 with column_1[2]:
-    st.selectbox('Engaged With Quizzes',
-                ['Yes', 'No'])
+    engaged_with_quizzes_value = st.selectbox('Engaged With Quizzes',
+                                                  ['Yes', 'No'])
 
 column_2 = st.columns(2, gap='large')
 
 with column_2[0]:
-    st.selectbox('Engaged With Exams',
-                ['Yes', 'No'])
+    engaged_with_exams_value = st.selectbox('Engaged With Exams',
+                                                  ['Yes', 'No'])
 
 with column_2[1]:
-    st.selectbox('Engaged With Q&A',
-                ['Yes', 'No'])
+    engaged_with_qa_value = st.selectbox('Engaged With Q&A',
+                                             ['Yes', 'No'])
 
 st.write('')
 st.write('')
 
-st.info(f'**Prediction: {0.87}**')
+button = st.button('Predict')
+
+st.write('')
+st.write('')
+
+engaged_with_quizzes_value = True if 'Yes' else False
+engaged_with_exams_value = True if 'Yes' else False
+engaged_with_qa_value = True if 'Yes' else False
+
+input_df = pd.DataFrame([days_engaged_value, minutes_watched_value, engaged_with_quizzes_value, engaged_with_exams_value, engaged_with_qa_value]).transpose()
+
+with open('models/model.pkl', 'rb') as file:
+    classifier = pickle.load(file)
+
+with open('models/standard_scaler.pickle', 'rb') as file:
+    standard_scaler = pickle.load(file)
+
+input_df = standard_scaler.transform(input_df)
+
+if button:
+    pred = 'Potential paid tier user' if classifier.predict(input_df)[0] == True else 'Potential free tier user'
+    st.info(f'Prediction: {pred}.')

@@ -8,6 +8,8 @@ from sklearn.model_selection import train_test_split
 from imblearn.over_sampling import RandomOverSampler
 from imblearn.under_sampling import RandomUnderSampler
 
+import pickle
+
 
 class DataTransformation:
     def __init__(self):
@@ -34,8 +36,15 @@ class DataTransformation:
 
         if scaler == 'standard':
             X_scaled = self.standard_scaler.fit_transform(X_resampled)
+            
+            with open('models/standard_scaler.pickle', 'wb') as file:
+                pickle.dump(self.standard_scaler, file, protocol=pickle.HIGHEST_PROTOCOL)
+        
         if scaler == 'minmax':
             X_scaled = self.minmax_scaler.fit_transform(X_resampled)
+
+            with open('models/minmax_scaler.pickle', 'wb') as file:
+                pickle.dump(self.minmax_scaler, file, protocol=pickle.HIGHEST_PROTOCOL)
 
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X_scaled, y_resampled, test_size=0.2)
     
