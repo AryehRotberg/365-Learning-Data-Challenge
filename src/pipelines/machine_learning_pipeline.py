@@ -4,6 +4,7 @@ from src.components.model_trainer import ModelTrainer
 
 from src.components.machine_learning_grid_search import grid_search
 
+
 # Data Ingestion
 ingestion = DataIngestion()
 ingestion.prepare_dataframe()

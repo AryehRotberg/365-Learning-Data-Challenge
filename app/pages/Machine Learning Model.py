@@ -47,6 +47,7 @@ engaged_with_exams_value = True if 'Yes' else False
 engaged_with_qa_value = True if 'Yes' else False
 
 input_df = pd.DataFrame([days_engaged_value, minutes_watched_value, engaged_with_quizzes_value, engaged_with_exams_value, engaged_with_qa_value]).transpose()
+# input_df.columns = ['days_enaged', 'minutes_watched', 'engaged_with_quizzes', 'engaged_with_exams', 'engaged_with_qa']
 
 with open('models/model.pkl', 'rb') as file:
     classifier = pickle.load(file)

@@ -21,8 +21,8 @@ class DataTransformation:
         self.minmax_scaler = MinMaxScaler()
     
     def transform_data(self, scaler='standard', resampler='ros|rus'):
-        X = self.df.drop('subscribed', axis=1)
-        y = self.df.subscribed
+        X = self.df.drop('paid', axis=1)
+        y = self.df.paid
 
         if resampler == 'ros|rus':
             X_oversampled, y_oversampled = self.ros.fit_resample(X, y)
