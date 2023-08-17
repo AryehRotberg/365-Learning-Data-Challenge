@@ -59,3 +59,15 @@ grid_search = {
         }
     }
 }
+
+grid_search = {
+    'rfc': {
+        'classifier': RandomForestClassifier(), 'params': {
+            'bootstrap': [True, False],
+            'max_depth': [1, 5, 10, 20, 30, None],
+            'max_features': ['log2', 'sqrt'],
+            'min_samples_split': [2, 5, 10],
+            'n_estimators': [1, 5, 10, 20, 30]
+        }
+    }
+}

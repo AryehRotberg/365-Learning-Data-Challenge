@@ -37,13 +37,13 @@ class DataTransformation:
         if scaler == 'standard':
             X_scaled = self.standard_scaler.fit_transform(X_resampled)
             
-            with open('models/standard_scaler.pickle', 'wb') as file:
+            with open('outputs/standard_scaler.pickle', 'wb') as file:
                 pickle.dump(self.standard_scaler, file, protocol=pickle.HIGHEST_PROTOCOL)
         
         if scaler == 'minmax':
             X_scaled = self.minmax_scaler.fit_transform(X_resampled)
 
-            with open('models/minmax_scaler.pickle', 'wb') as file:
+            with open('outputs/minmax_scaler.pickle', 'wb') as file:
                 pickle.dump(self.minmax_scaler, file, protocol=pickle.HIGHEST_PROTOCOL)
 
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X_scaled, y_resampled, test_size=0.2)

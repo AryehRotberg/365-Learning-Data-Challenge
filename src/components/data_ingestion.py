@@ -45,7 +45,7 @@ class DataIngestion:
         self.df['paid'] = self.df.student_id.isin(self.student_purchases_df.student_id)
 
         self.df = self.df[~((self.df.paid == True) & (self.df.days_engaged == 0))]
-        # self.df = self.df.drop('student_id', axis=1)
+        self.df = self.df.drop('student_id', axis=1)
     
     def to_csv(self, file_path):
         self.df.to_csv(file_path, index=False)
