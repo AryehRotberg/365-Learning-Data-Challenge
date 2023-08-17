@@ -68,29 +68,11 @@ input_df.columns = ['days_engaged',
                     'engaged_with_exams',
                     'engaged_with_qa']
 
-import mlflow
-# with open('outputs/models/model.pkl', 'rb') as file:
-#     classifier = pickle.load(file)
-classifier = mlflow.sklearn.load_model('runs:/f1f5530e3ba647c09b9cd043e1a5312f/Best_Classifier')
+with open('outputs/models/model.pkl', 'rb') as file:
+    classifier = pickle.load(file)
 
 with open('outputs/standard_scaler.pickle', 'rb') as file:
     standard_scaler = pickle.load(file)
-
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-
-X_train = pd.read_csv('data/train/X_train.csv').values
-X_test = pd.read_csv('data/test/X_test.csv').values
-y_train = pd.read_csv('data/train/y_train.csv').values
-y_test = pd.read_csv('data/test/y_test.csv').values
-
-conf = confusion_matrix(y_test, classifier.predict(X_test))
-
-disp = ConfusionMatrixDisplay(conf)
-disp.plot()
-# st.pyplot(disp)
-
 
 input_df = standard_scaler.transform(input_df)
 
