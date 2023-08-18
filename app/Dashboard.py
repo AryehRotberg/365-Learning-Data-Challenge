@@ -57,7 +57,9 @@ col1_chart_expander.write(description['main_chart_1.2'])
 
 # Chart 2
 col2_chart.plotly_chart(utils.plot_minutes_watched_by_country(), use_container_width=True)
-col2_chart.expander('See details:').write(description['main_chart_2'])
+col2_chart_expander = col2_chart.expander('See details:')
+col2_chart_expander.write(description['main_chart_2.1'])
+col2_chart_expander.write(description['main_chart_2.2'])
 
 st.write('')
 
@@ -65,11 +67,19 @@ col3_chart, col4_chart = st.columns(2, gap='large')
 
 # Chart 3
 col3_chart.plotly_chart(utils.plot_minutes_watched_by_month(), use_container_width=True)
-col3_chart.expander('See details:').write(description['main_chart_3'])
+col3_chart_expander = col3_chart.expander('See details:')
+col3_chart_expander.write(description['main_chart_3.1'])
+col3_chart_expander.write(description['main_chart_3.2'])
 
 # Chart 4
 col4_chart.plotly_chart(utils.plot_registered_onboarded(), use_container_width=True)
-col4_chart.expander('See details:').write(description['main_chart_4'])
+col4_chart_expander = col4_chart.expander('See details:')
+col4_chart_expander.write(description['main_chart_4.1'])
+col4_chart_expander.write(description['main_chart_4.2'])
 
 st.write('')
-st.markdown(description['main_dashboard_summary'])
+st.markdown('**Overall Conclusions:**')
+st.markdown(description['main_dashboard_summary_1.1'])
+st.markdown(description['main_dashboard_summary_1.2'])
+st.markdown(description['main_dashboard_summary_1.3'])
+st.markdown(description['main_dashboard_summary_1.4'])

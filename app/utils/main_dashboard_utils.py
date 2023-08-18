@@ -179,7 +179,7 @@ class main_dashboard_utils:
                       y='student_country',
                       orientation='h',
                       color='student_country',
-                      title='Amount of Minutes Watched on the Platform by Country',
+                      title=chart_titles['main_chart_2'],
                       labels={'minutes_watched': 'Minutes Watched', 'student_country': 'Student Country'},
                       color_discrete_sequence=px.colors.qualitative.Prism)
     
@@ -209,7 +209,7 @@ class main_dashboard_utils:
         fig.update_xaxes(title_text='Month')
         fig.update_yaxes(title_text='Minutes Watched', secondary_y=False)
         fig.update_yaxes(title_text='Average Minutes Watched', secondary_y=True)
-        fig.update_layout(title='Minutes Watched by Month')
+        fig.update_layout(title=chart_titles['main_chart_3'])
 
         return fig
     
@@ -236,7 +236,7 @@ class main_dashboard_utils:
                     x=students_registered_onboarded.month,
                     y=students_registered_onboarded.onboarded,
                     offsetgroup=2,
-                    marker_color=colors_onboarded)]).update_layout(title='Number of Registered Students Compared to Onboarded')
+                    marker_color=colors_onboarded)]).update_layout(title=chart_titles['main_chart_4'])
     
     def get_registered_students_kpi(self):
         return self.student_info_df.student_id.nunique()

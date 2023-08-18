@@ -1,8 +1,8 @@
 {
     "main_chart_1": "Top 5 Countries with the Highest Number of Students on the Platform",
-    "main_chart_2": "",
-    "main_chart_3": "",
-    "main_chart_4": "",
+    "main_chart_2": "Top 5 Countries by Total Minutes Watched on the Platform",
+    "main_chart_3": "Comparison of Monthly Minutes and Average Minutes Watched by Students",
+    "main_chart_4": "Comparison of Monthly Registered and Onboarded Students",
 
     "additional_insights_chart_1": "Comparison of Monthly Onboarded Students and Platform Purchases",
     "additional_insights_chart_2": "Distribution of Student Purchases on the Platform by Purchase Type",

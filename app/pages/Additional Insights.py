@@ -31,11 +31,15 @@ col1_chart_expander.write(description['additional_insights_chart_1.1'])
 col1_chart_expander.write(description['additional_insights_chart_1.2'])
 
 col2_chart.plotly_chart(utils.get_student_and_purchase_type(), use_container_width=True)
-col2_chart.expander('See details:').write(description['additional_insights_chart_2'])
+col2_chart_expander = col2_chart.expander('See details:')
+col2_chart_expander.write(description['additional_insights_chart_2.1'])
+col2_chart_expander.write(description['additional_insights_chart_2.2'])
 
 col3_chart, col4_chart = st.columns(2, gap='large')
 col3_chart.plotly_chart(utils.get_student_engagement_countries(), use_container_width=True)
-col3_chart.expander('See details:').write(description['additional_insights_chart_3'])
+col3_chart_expander = col3_chart.expander('See details:')
+col3_chart_expander.write(description['additional_insights_chart_3.1'])
+col3_chart_expander.write(description['additional_insights_chart_3.2'])
 
 col4_chart.plotly_chart(utils.get_hub_questions_asked_per_month(), use_container_width=True)
 col4_chart_expander = col4_chart.expander('See details:')

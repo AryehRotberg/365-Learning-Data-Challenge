@@ -14,11 +14,13 @@ st.set_page_config(page_title='Machine Learning Model',
 
 st.title('Machine Learning Model 🧠')
 
-ml_expander = st.expander('Machine Learning')
-ml_expander.markdown(description['machine_learning_description_todo'])
-ml_expander.markdown(description['machine_learning_description_todo_bullet_1'])
-ml_expander.markdown(description['machine_learning_description_todo_bullet_2'])
-ml_expander.markdown(description['machine_learning_description_todo_bullet_3'])
+st.markdown(description['ml_introduction_1.1'])
+st.markdown(description['ml_introduction_1.2'])
+st.markdown(description['ml_introduction_1.3'])
+st.markdown(description['ml_introduction_1.4'])
+st.markdown(description['ml_introduction_1.5'])
+st.markdown(description['ml_introduction_1.6'])
+st.write('')
 
 column_1 = st.columns(3, gap='large')
 
