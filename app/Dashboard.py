@@ -51,7 +51,9 @@ col1_chart, col2_chart = st.columns(2, gap='large')
 
 # Chart 1
 col1_chart.plotly_chart(utils.plot_top_largest_number_of_users(), use_container_width=True)
-col1_chart.expander('See details:').write(description['main_chart_1'])
+col1_chart_expander = col1_chart.expander('See details:')
+col1_chart_expander.write(description['main_chart_1.1'])
+col1_chart_expander.write(description['main_chart_1.2'])
 
 # Chart 2
 col2_chart.plotly_chart(utils.plot_minutes_watched_by_country(), use_container_width=True)

@@ -1,8 +1,14 @@
 import pandas as pd
 
+import json
+
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+
+
+with open('app/utils/chart_titles.json', 'r') as file:
+    chart_titles = json.load(file)
 
 
 class additional_insights_utils:
@@ -57,7 +63,7 @@ class additional_insights_utils:
 
         fig.update_yaxes(title_text='Purchases', secondary_y=False)
         fig.update_yaxes(title_text='Onboarded', secondary_y=True)
-        fig.update_layout(title='Number of Purchases Compared to Onboarded by Month')
+        fig.update_layout(title=chart_titles['additional_insights_chart_1'])
 
         return fig
     
@@ -70,7 +76,7 @@ class additional_insights_utils:
                             color='purchase_type',
                             labels={'purchase_type': 'Purchase Type'},
                             color_discrete_sequence=colors,
-                            title='Number of Purchases By Purchase Type').update_layout(yaxis_title='Purchases')
+                            title=chart_titles['additional_insights_chart_2']).update_layout(yaxis_title='Purchases')
 
         return plot
     
@@ -90,7 +96,7 @@ class additional_insights_utils:
                       color='student_country',
                       labels={'student_country': 'Student Country'},
                       color_discrete_sequence=px.colors.qualitative.Prism,
-                      title='Number of Engaged Students By Country')
+                      title=chart_titles['additional_insights_chart_3'])
         
         plot.update_layout(yaxis_title='Engaged')
 
@@ -114,7 +120,7 @@ class additional_insights_utils:
                       color='month',
                       color_discrete_sequence=colors,
                       labels={'month': 'Month', 'questions': 'Questions'},
-                      title='Number of Questions Asked By Month')
+                      title=chart_titles['additional_insights_chart_4'])
         
     def get_engagements_amount(self):
         return self.student_engagement_df.shape[0] / 1000

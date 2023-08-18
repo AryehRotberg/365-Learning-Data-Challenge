@@ -1,11 +1,17 @@
 import numpy as np
 import pandas as pd
 
+import json
+
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 from datetime import datetime
+
+
+with open('app/utils/chart_titles.json', 'r') as file:
+    chart_titles = json.load(file)
 
 
 class main_dashboard_utils:
@@ -161,7 +167,7 @@ class main_dashboard_utils:
                       y='student_country',
                       orientation='h',
                       color='student_country',
-                      title='Top Countries with the Most Number of Students',
+                      title=chart_titles['main_chart_1'],
                       labels={'students': 'Students', 'student_country': 'Student Country'},    
                       color_discrete_sequence=px.colors.qualitative.Prism)
         
