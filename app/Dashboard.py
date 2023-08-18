@@ -2,6 +2,7 @@ import pandas as pd
 import json
 
 import streamlit as st
+from streamlit_extras.metric_cards import style_metric_cards
 
 from utils.main_dashboard_utils import main_dashboard_utils
 
@@ -40,10 +41,12 @@ st.write('')
 st.markdown("**KPI'S**")
 
 col1_kpi, col2_kpi, col3_kpi, col4_kpi = st.columns(4)
-col1_kpi.metric('Registered Students', value=utils.get_registered_students_kpi())
-col2_kpi.metric('Purchases', value=utils.get_purchases_kpi())
-col3_kpi.metric('Average Minutes Watched', value=utils.get_average_minutes_watched_kpi())
-col4_kpi.metric('Onboarded from Registered', value=f'{utils.get_onboarded_from_registered_kpi()}%')
+col1_kpi.metric(label='Registered Students', value=utils.get_registered_students_kpi())
+col2_kpi.metric(label='Purchases', value=utils.get_purchases_kpi())
+col3_kpi.metric(label='Average Minutes Watched', value=utils.get_average_minutes_watched_kpi())
+col4_kpi.metric(label='Onboarded from Registered', value=f'{utils.get_onboarded_from_registered_kpi()}%')
+
+style_metric_cards(background_color='#0000')
 
 st.write('')
 

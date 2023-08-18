@@ -4,6 +4,7 @@ scikit-learn
 seaborn
 fastapi
 streamlit
+streamlit-extras
 plotly
 imblearn
 xgboost

@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_extras.metric_cards import style_metric_cards
 
 import json
 
@@ -22,6 +23,8 @@ col1_kpi.metric('Engagements', value=f'{utils.get_engagements_amount()} K')
 col2_kpi.metric('Exams', utils.get_exams_amount())
 col3_kpi.metric('Quizzes', utils.get_quizzes_amount())
 col4_kpi.metric('Hub Questions', utils.get_hub_questions_amount())
+
+style_metric_cards(background_color='#0000')
 
 col1_chart, col2_chart = st.columns(2, gap='large')
 
