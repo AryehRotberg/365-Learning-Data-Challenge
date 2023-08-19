@@ -6,8 +6,6 @@ from sklearn.model_selection import GridSearchCV
 
 from sklearn.metrics import classification_report, roc_auc_score, f1_score
 
-# from sklearn.metrics import RocCurveDisplay
-# RocCurveDisplay.from_estimator(classifier, X_test, y_test)
 
 class ModelTrainer:
     def __init__(self):
@@ -51,7 +49,7 @@ class ModelTrainer:
         y_pred = classifier.predict(self.X_test)
 
         report = pd.DataFrame(classification_report(self.y_test, y_pred, output_dict=True)).transpose()
-        report.to_csv('data/processed/best_classifier_report.csv', index=False)
+        report.to_csv('outputs/best_classifier_report.csv', index=True)
 
         mlflow.set_experiment('365 Learning Data Challenge - Machine Learning')
 
@@ -60,7 +58,7 @@ class ModelTrainer:
                 for param_type, value in params.items():
                     mlflow.log_param(param_type, value)
             
-            mlflow.log_artifact('data/processed/best_classifier_report.csv')
+            mlflow.log_artifact('outputs/best_classifier_report.csv')
 
             mlflow.log_metric('f1_score', f1_score(self.y_test, y_pred))
             mlflow.log_metric('roc_auc_score', roc_auc_score(self.y_test, y_pred))

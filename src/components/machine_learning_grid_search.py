@@ -4,7 +4,6 @@ from xgboost import XGBClassifier
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.naive_bayes import MultinomialNB
 from sklearn.neighbors import KNeighborsClassifier
 
 
@@ -56,18 +55,6 @@ grid_search = {
             "criterion": ["friedman_mse",  "mae"],
             "subsample": [0.5, 0.618, 0.8, 0.85, 0.9, 0.95, 1.0],
             "n_estimators": [10]
-        }
-    }
-}
-
-grid_search = {
-    'rfc': {
-        'classifier': RandomForestClassifier(), 'params': {
-            'bootstrap': [True, False],
-            'max_depth': [1, 5, 10, 20, 30, None],
-            'max_features': ['log2', 'sqrt'],
-            'min_samples_split': [2, 5, 10],
-            'n_estimators': [1, 5, 10, 20, 30]
         }
     }
 }

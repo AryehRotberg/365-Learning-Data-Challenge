@@ -91,8 +91,6 @@ class main_dashboard_utils:
         return course_minutes_watched
     
     def get_platform_minutes_watched(self):
-        # self.student_country = self.get_student_country()
-
         country_minutes_watched = pd.merge(self.merged_student_info_purchase,
                                            self.student_learning_df[['student_id', 'minutes_watched']],
                                            on='student_id',
@@ -127,7 +125,6 @@ class main_dashboard_utils:
     
     def get_students_registered_onboarded(self):
         monthly_registered_students = pd.merge(self.merged_student_info_purchase, self.student_engagement_df, on='student_id', how='left')
-        # monthly_registered_students.date_registered = pd.to_datetime(monthly_registered_students.date_registered)
 
         monthly_onboarded_students = monthly_registered_students.copy()
 
@@ -227,12 +224,13 @@ class main_dashboard_utils:
             colors_onboarded = []
 
         return go.Figure(data=[
-             go.Bar(name='Students', x=students_registered_onboarded.month,
-                    y=students_registered_onboarded.students,
-                    offsetgroup=1,
-                    marker_color=colors_students),
+            go.Bar(name='Students',
+                   x=students_registered_onboarded.month,
+                   y=students_registered_onboarded.students,
+                   offsetgroup=1,
+                   marker_color=colors_students),
             
-             go.Bar(name='Onboarded',
+            go.Bar(name='Onboarded',
                     x=students_registered_onboarded.month,
                     y=students_registered_onboarded.onboarded,
                     offsetgroup=2,
