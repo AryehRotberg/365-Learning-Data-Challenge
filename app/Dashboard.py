@@ -63,6 +63,10 @@ col2_chart.plotly_chart(utils.plot_minutes_watched_by_country(), use_container_w
 col2_chart_expander = col2_chart.expander('See details:')
 col2_chart_expander.write(description['main_chart_2.1'])
 col2_chart_expander.write(description['main_chart_2.2'])
+col2_chart_expander.write(description['main_chart_2.3'])
+col2_chart_expander.write(description['main_chart_2.4'])
+col2_chart_expander.write(description['main_chart_2.5'])
+col2_chart_expander.write(description['main_chart_2.6'])
 
 st.write('')
 

@@ -43,6 +43,9 @@ col3_chart.plotly_chart(utils.get_student_engagement_countries(), use_container_
 col3_chart_expander = col3_chart.expander('See details:')
 col3_chart_expander.write(description['additional_insights_chart_3.1'])
 col3_chart_expander.write(description['additional_insights_chart_3.2'])
+col3_chart_expander.write(description['additional_insights_chart_3.3'])
+col3_chart_expander.write(description['additional_insights_chart_3.4'])
+col3_chart_expander.write(description['additional_insights_chart_3.5'])
 
 col4_chart.plotly_chart(utils.get_hub_questions_asked_per_month(), use_container_width=True)
 col4_chart_expander = col4_chart.expander('See details:')

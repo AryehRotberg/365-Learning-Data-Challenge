@@ -14,19 +14,29 @@ st.set_page_config(page_title='Machine Learning Model',
 
 st.title('Machine Learning Model 🧠')
 
-st.markdown(description['ml_introduction_1.1'])
-st.markdown(description['ml_introduction_1.2'])
-st.markdown(description['ml_introduction_1.3'])
-st.markdown(description['ml_introduction_1.4'])
-st.markdown(description['ml_introduction_1.5'])
-st.markdown(description['ml_introduction_1.6'])
+ml_expander = st.expander('Introduction:')
+
+for i in range(1, 17):
+    ml_expander.markdown(description[f'ml_introduction_1.{i}'])
+
+    if i == 6 or i == 2 or i == 12:
+        ml_expander.write('')
+
+ml_expander.write('')
+ml_expander.write('')
+
+ml_expander.dataframe(pd.read_csv('outputs/best_classifier_report.csv').drop('support', axis=1), hide_index=True, use_container_width=True)
+img_col_1, img_col_2 = ml_expander.columns(2, gap='large')
+img_col_1.image('outputs/images/confusion_matrix.png', use_column_width=True)
+img_col_2.image('outputs/images/roc_curve.png', use_column_width=True)
+
 st.write('')
 
 column_1 = st.columns(3, gap='large')
 
 with column_1[0]:
     days_engaged_value = st.number_input('Days Engaged',
-                                             min_value=0)
+                                            min_value=0)
 
 with column_1[1]:
     minutes_watched_value = st.number_input('Minutes Watched',
