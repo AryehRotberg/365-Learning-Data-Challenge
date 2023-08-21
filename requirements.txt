@@ -1,6 +1,7 @@
 numpy
 pandas
 scikit-learn
+optuna
 seaborn
 fastapi
 streamlit
