@@ -90,24 +90,24 @@ class additional_insights_utils:
         student_engagement_countries = student_engagement_countries.rename(columns={0: 'engaged'})
 
         # Plot
-        # plot = px.bar(data_frame=student_engagement_countries,
-        #               x='student_country',
-        #               y='engaged',
-        #               color='student_country',
-        #               labels={'student_country': 'Student Country'},
-        #               color_discrete_sequence=px.colors.qualitative.Prism,
-        #               title=chart_titles['additional_insights_chart_3'])
+        plot = px.bar(data_frame=student_engagement_countries,
+                      x='student_country',
+                      y='engaged',
+                      color='student_country',
+                      labels={'student_country': 'Student Country'},
+                      color_discrete_sequence=px.colors.qualitative.Prism,
+                      title=chart_titles['additional_insights_chart_3'])
         
-        # plot.update_layout(yaxis_title='Engaged')
+        plot.update_layout(yaxis_title='Engaged')
 
-        plot = px.pie(data_frame=student_engagement_countries,
-                      names='student_country',
-                      values='engaged',
-                      color_discrete_sequence=px.colors.qualitative.Bold,
-                      title=chart_titles['additional_insights_chart_3'],
-                      hole=0.5)
+        # plot = px.pie(data_frame=student_engagement_countries,
+        #               names='student_country',
+        #               values='engaged',
+        #               color_discrete_sequence=px.colors.qualitative.Bold,
+        #               title=chart_titles['additional_insights_chart_3'],
+        #               hole=0.5)
         
-        plot.update_traces(textinfo='value+percent')
+        # plot.update_traces(textinfo='value+percent')
 
         return plot
     
