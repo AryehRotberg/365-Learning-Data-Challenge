@@ -42,9 +42,8 @@ def objective(trial: optuna.trial.Trial):
                                         n_estimators=n_estimators)
     
     score = cross_val_score(classifier, X_train, y_train.ravel(), n_jobs=-1, cv=5, scoring='f1')
-    f1_score = score.mean()
 
-    return f1_score
+    return score.mean()
 
 study = optuna.create_study(direction='maximize')
 study.optimize(objective, n_trials=100)
