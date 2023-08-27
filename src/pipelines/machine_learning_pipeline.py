@@ -1,27 +1,39 @@
 from src.components.data_ingestion import DataIngestion
 from src.components.data_transformation import DataTransformation
 from src.components.model_trainer import ModelTrainer
-
-from src.components.machine_learning_grid_search import grid_search
+from src.components.model_evaluation import ModelEvaluation
 
 
 # Data Ingestion
 ingestion = DataIngestion()
+
 ingestion.prepare_dataframe()
 ingestion.to_csv('data/processed/ml_dataset.csv')
 
 # Data Transformation
 transformation = DataTransformation()
+
 transformation.transform_data(scaler='standard',
                               resampler='ros|rus')
-
 transformation.to_csv(train_directory='data/train',
                       test_directory='data/test')
 
 # Model Training
 model_training = ModelTrainer()
 
-scores = model_training.get_tuned_models_scores(grid_search, verbose=True)
-classifier, params = model_training.get_best_classifier(scores)
+optuna_pipeline = model_training.create_optuna_pipeline(n_trials=550)
+scores = model_training.get_study_values(optuna_pipeline)
+classifier = model_training.get_best_classifier(scores)
 
-model_training.save_best_classifier(classifier, params)
+# Model Evaluation
+model_evaluation = ModelEvaluation(classifier)
+
+report = model_evaluation.get_classification_report()
+conf = model_evaluation.get_confusion_matrix(plot=False)
+f1_score = model_evaluation.get_f1_score()
+
+print(report, '\n')
+print(conf, '\n')
+print(f1_score, '\n')
+
+model_evaluation.save_outputs()
