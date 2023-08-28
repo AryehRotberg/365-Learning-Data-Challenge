@@ -5,18 +5,18 @@ from src.components.model_evaluation import ModelEvaluation
 
 
 # Data Ingestion
-ingestion = DataIngestion()
+# ingestion = DataIngestion()
 
-ingestion.prepare_dataframe()
-ingestion.to_csv('data/processed/ml_dataset.csv')
+# ingestion.prepare_dataframe()
+# ingestion.to_csv('data/processed/ml_dataset.csv')
 
 # Data Transformation
-transformation = DataTransformation()
+# transformation = DataTransformation()
 
-transformation.transform_data(scaler='standard',
-                              resampler='ros|rus')
-transformation.to_csv(train_directory='data/train',
-                      test_directory='data/test')
+# transformation.transform_data(scaler='standard',
+#                               resampler='ros|rus')
+# transformation.to_csv(train_directory='data/train',
+#                       test_directory='data/test')
 
 # Model Training
 model_training = ModelTrainer()
@@ -36,4 +36,4 @@ print(report, '\n')
 print(conf, '\n')
 print(f1_score, '\n')
 
-model_evaluation.save_outputs()
+model_evaluation.save_outputs(directory='outputs')

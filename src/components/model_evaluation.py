@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -32,11 +34,12 @@ class ModelEvaluation:
     def get_f1_score(self):
         return f1_score(self.y_test, self.y_pred)
     
-    def save_outputs(self):
-        self.get_classification_report().to_csv('outputs/best_classifier_report.csv')
+    def save_outputs(self, directory):
+        self.get_classification_report().to_csv(os.path.join(directory, 'best_classifier_report.csv'))
 
-        with open('outputs/models/model.pkl', 'wb') as file:
+        with open(os.path.join(directory, 'models/model.pkl'), 'wb') as file:
             pickle.dump(self.classifier, file, protocol=pickle.HIGHEST_PROTOCOL)
         
-        self.confusion_matrix_plot.figure_.savefig('outputs/images/confusion_matrix.png')
-        RocCurveDisplay.from_estimator(self.classifier, self.X_test, self.y_test).figure_.savefig('outputs/images/roc_curve.png')
+        self.confusion_matrix_plot.figure_.savefig(os.path.join(directory, 'images/confusion_matrix.png'))
+        RocCurveDisplay.from_estimator(self.classifier, self.X_test, self.y_test).figure_ \
+        .savefig(os.path.join(directory, 'images/roc_curve.png'))
