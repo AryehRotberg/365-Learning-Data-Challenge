@@ -13,4 +13,5 @@ nbformat
 pydantic
 openai
 langchain
+tabulate
 -e .
