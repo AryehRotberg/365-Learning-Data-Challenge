@@ -58,3 +58,4 @@ if prompt := st.chat_input(placeholder='What is the data about?'):
     
     except OutputParserException as e:
         st.error('Oops! Apparently there was a problem with json parsing. Please rewrite your prompt.')
+        st.stop()
