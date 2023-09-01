@@ -11,5 +11,6 @@ imblearn
 xgboost
 nbformat
 pydantic
+openai
 langchain
 -e .
