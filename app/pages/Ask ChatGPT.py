@@ -9,9 +9,6 @@ from langchain.chat_models import ChatOpenAI
 from openai.error import RateLimitError
 from langchain.schema.output_parser import OutputParserException
 
-from langchain.agents.openai_functions_agent import base
-from langchain.tools.python import tool
-
 
 df = pd.read_csv('data/processed/ml_dataset.csv')
 
