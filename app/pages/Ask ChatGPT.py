@@ -7,6 +7,7 @@ from langchain.callbacks import StreamlitCallbackHandler
 from langchain.chat_models import ChatOpenAI
 
 from openai.error import RateLimitError
+from openai.error import AuthenticationError
 from langchain.schema.output_parser import OutputParserException
 
 
@@ -54,5 +55,8 @@ if prompt := st.chat_input(placeholder='What is the data about?'):
         st.stop()
     
     except OutputParserException as e:
-        st.error('Oops! Apparently there was a problem with json parsing. Please rewrite your prompt.')
+        st.info('Oops! Apparently there was a problem with json parsing. Please rewrite your prompt.')
         st.stop()
+    
+    except AuthenticationError:
+        st.info('Incorrect API key provided. You can find your API key at https://platform.openai.com/account/api-keys.')
