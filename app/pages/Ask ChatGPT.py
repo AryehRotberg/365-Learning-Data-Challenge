@@ -60,3 +60,4 @@ if prompt := st.chat_input(placeholder='What is the data about?'):
     
     except AuthenticationError:
         st.info('Incorrect API key provided. You can find your API key at https://platform.openai.com/account/api-keys.')
+        st.stop()
