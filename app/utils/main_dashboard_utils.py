@@ -284,6 +284,6 @@ class main_dashboard_utils:
             return days <= 365
 
     def replace_purchase_type(self, paid: bool, purchase_type: str):
-            if paid == False or purchase_type == np.nan:
-                return 'Free'
-            return purchase_type
+        if paid == False or purchase_type == np.nan:
+            return 'Free'
+        return purchase_type

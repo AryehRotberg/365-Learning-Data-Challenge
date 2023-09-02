@@ -89,7 +89,6 @@ class additional_insights_utils:
         student_engagement_countries = student_engagement_countries.groupby('student_country').size().reset_index().sort_values(by=0, ascending=False).head()
         student_engagement_countries = student_engagement_countries.rename(columns={0: 'engaged'})
 
-        # Plot
         # plot = px.bar(data_frame=student_engagement_countries,
         #               x='student_country',
         #               y='engaged',
@@ -100,6 +99,7 @@ class additional_insights_utils:
         
         # plot.update_layout(yaxis_title='Engaged')
 
+        # Plot
         plot = px.pie(data_frame=student_engagement_countries,
                       names='student_country',
                       values='engaged',
