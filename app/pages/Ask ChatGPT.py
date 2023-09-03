@@ -1,6 +1,8 @@
 import pandas as pd
 import streamlit as st
 
+import json
+
 from langchain.agents import AgentType
 from langchain.agents import create_pandas_dataframe_agent
 from langchain.callbacks import StreamlitCallbackHandler
@@ -11,6 +13,9 @@ from openai.error import AuthenticationError
 from langchain.schema.output_parser import OutputParserException
 
 
+with open('app/utils/descriptions.json', 'r') as file:
+    description = json.load(file)
+
 df = pd.read_csv('data/processed/ml_dataset.csv')
 
 st.set_page_config(page_title='Ask ChatGPT',
@@ -18,6 +23,11 @@ st.set_page_config(page_title='Ask ChatGPT',
                    page_icon='🤖')
 
 st.title('Ask ChatGPT 🤖')
+
+expander = st.expander('Introduction')
+
+for i in range(1, 12):
+    expander.markdown(description[f'chatgpt_instructions_1.{i}'])
 
 openai_api_key = st.sidebar.text_input('OpenAI API Key', type='password')
 

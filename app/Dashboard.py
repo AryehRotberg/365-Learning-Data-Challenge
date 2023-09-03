@@ -59,12 +59,9 @@ col1_chart_expander.write(description['main_chart_1.2'])
 
 col2_chart.plotly_chart(utils.plot_minutes_watched_by_country(), use_container_width=True)
 col2_chart_expander = col2_chart.expander('See details:')
-col2_chart_expander.write(description['main_chart_2.1'])
-col2_chart_expander.write(description['main_chart_2.2'])
-col2_chart_expander.write(description['main_chart_2.3'])
-col2_chart_expander.write(description['main_chart_2.4'])
-col2_chart_expander.write(description['main_chart_2.5'])
-col2_chart_expander.write(description['main_chart_2.6'])
+
+for i in range(1, 7):
+    col2_chart_expander.markdown(description[f'main_chart_2.{i}'])
 
 st.write('')
 
@@ -82,7 +79,6 @@ col4_chart_expander.write(description['main_chart_4.2'])
 
 st.write('')
 st.markdown('**Overall Conclusions:**')
-st.markdown(description['main_dashboard_summary_1.1'])
-st.markdown(description['main_dashboard_summary_1.2'])
-st.markdown(description['main_dashboard_summary_1.3'])
-st.markdown(description['main_dashboard_summary_1.4'])
+
+for i in range(1, 5):
+    st.markdown(description[f'main_dashboard_summary_1.{i}'])

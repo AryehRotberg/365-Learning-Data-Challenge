@@ -16,21 +16,15 @@ st.title('Machine Learning Model 🧠')
 
 ml_expander = st.expander('Introduction:')
 
-for i in range(1, 19):
+for i in range(1, 25):
     ml_expander.markdown(description[f'ml_introduction_1.{i}'])
-
-    if i == 6 or i == 2 or i == 12 or i == 17:
-        ml_expander.write('')
-
-ml_expander.write('')
-ml_expander.write('')
 
 ml_expander.dataframe(pd.read_csv('outputs/best_classifier_report.csv') \
                       .drop('support', axis=1) \
                       .rename(columns={'Unnamed: 0': '',
-                                         'precision': 'Precision',
-                                         'recall': 'Recall',
-                                         'f1-score': 'F1-Score'}), hide_index=True, use_container_width=True)
+                                       'precision': 'Precision',
+                                       'recall': 'Recall',
+                                       'f1-score': 'F1-Score'}), hide_index=True, use_container_width=True)
 
 img_col_1, img_col_2 = ml_expander.columns(2, gap='large')
 img_col_1.image('outputs/images/confusion_matrix.png', use_column_width=True)
