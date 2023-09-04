@@ -26,7 +26,7 @@ st.title('Ask ChatGPT 🤖')
 
 expander = st.expander('Introduction')
 
-for i in range(1, 12):
+for i in range(1, 11):
     expander.markdown(description[f'chatgpt_instructions_1.{i}'])
 
 openai_api_key = st.sidebar.text_input('OpenAI API Key', type='password')

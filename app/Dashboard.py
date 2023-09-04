@@ -42,8 +42,8 @@ st.markdown("**KPI'S**")
 
 col1_kpi, col2_kpi, col3_kpi, col4_kpi = st.columns(4)
 col1_kpi.metric(label='Registered Students', value=utils.get_registered_students_kpi())
-col2_kpi.metric(label='Purchases', value=utils.get_purchases_kpi())
-col3_kpi.metric(label='Average Minutes Watched', value=utils.get_average_minutes_watched_kpi())
+col2_kpi.metric(label='Total Purchases', value=utils.get_purchases_kpi())
+col3_kpi.metric(label='Total Average Minutes Watched', value=utils.get_average_minutes_watched_kpi())
 col4_kpi.metric(label='Onboarded from Registered', value=f'{utils.get_onboarded_from_registered_kpi()}%')
 
 style_metric_cards(background_color='#0000')
@@ -60,7 +60,7 @@ col1_chart_expander.write(description['main_chart_1.2'])
 col2_chart.plotly_chart(utils.plot_minutes_watched_by_country(), use_container_width=True)
 col2_chart_expander = col2_chart.expander('See details:')
 
-for i in range(1, 7):
+for i in range(1, 8):
     col2_chart_expander.markdown(description[f'main_chart_2.{i}'])
 
 st.write('')

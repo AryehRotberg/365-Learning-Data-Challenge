@@ -11,6 +11,7 @@
     "main_chart_2.4": "- **Great Britain:** Stands third, showcasing strong user preference.",
     "main_chart_2.5": "- **Canada:** Claims the fourth spot, indicating consistent online learning adoption.",
     "main_chart_2.6": "- **Nigeria:** Fifth, representing a growing e-learning interest in the region.",
+    "main_chart_2.7": "",
 
     "main_chart_3.1": "The presented dual plot provides an insightful overview of the viewing patterns and trends in the platform's course content over a span of ten months, from January to October. The first plot depicts the cumulative minutes watched by users on the platform for each individual month, while the second plot complements this information with a scatterplot illustrating the average minutes watched per month.",
     "main_chart_3.2": "Notably, the data highlights August as the standout month in terms of course consumption, with the highest amount of minutes watched.",
@@ -20,6 +21,7 @@
 
     "additional_insights_chart_1.1": "This dual scatterplot graph provides a side-by-side comparison of two crucial metrics - monthly onboarded students and platform purchases spanning the period from January to October. The x-axis signifies the months of the year, ranging sequentially from January to October, while the y-axis for each scatterplot displays the respective counts of onboarded students and purchases.",
     "additional_insights_chart_1.2": "The month of August stands out with the highest count of onboarded students, signifying a peak in user acquisition during this period. However, it becomes evident that the trend of number of purchases is not uniformly upwards. While the influx of new students in August might have initially suggested a potential correlation, the subsequent months reveal an inconsistent relationship between student onboarding and purchase behavior. Particularly, the month of October presents a divergence from the anticipated pattern, registering the lowest number of purchases across all months.",
+    "additional_insights_chart_1.3": "Although, it's important to note that this disparity could be attributed to the data collection only extending up to the 20th day of October, rather than encompassing the entire month. This partial data could have skewed the results, leading to an inaccurate representation of October's purchasing trends.",
 
     "additional_insights_chart_2.1": "The bar plot provides an insightful overview of student purchases on the platform, categorized by three distinct purchase types: monthly, quarterly, and annual. Each purchase type is represented by its respective bar, and the y-axis indicates the count of student purchases. This visualization offers valuable insights into the preferences and choices of students when it comes to the frequency of their purchases.",
     "additional_insights_chart_2.2": "Among the three available purchase types, the annual choice stands out as the clear favorite.",
@@ -29,6 +31,7 @@
     "additional_insights_chart_3.3": "- **India** closely follows the United States in terms of engagement.",
     "additional_insights_chart_3.4": "- **Egypt and Great Britain's** presence among the top 5 countries highlights their active role in the platform's engagement landscape.",
     "additional_insights_chart_3.5": "- **Nigeria** rounds off the list of top 5 engaged countries, signifying the platform's inclusive reach across diverse regions.",
+    "additional_insights_chart_3.6": "",
 
     "additional_insights_chart_4.1": "The barplot provides an insightful overview of the evolving dynamics of question activity on a Q&A hub over the course of ten months, from January to October. Each bar represents a month, and its height signifies the total number of questions asked during that period.",
     "additional_insights_chart_4.2": "Among all the months, August stands out as the pinnacle of user engagement, witnessing the highest number of questions asked.",
@@ -44,7 +47,7 @@
     "additional_insights_summary_1.4": "In conclusion, by examining these four distinct charts, it becomes evident that August is a standout month for engagement, the annual purchase type is favored, and the platform's growth trajectory is positive. These insights provide valuable directions for optimizing marketing efforts, content creation, and user engagement strategies moving forward.",
 
     "ml_introduction_1.1": "**In today's data-driven landscape, understanding user behavior and preferences is paramount for platform success. We will use a Random Forest Classifier, a robust and a versatile machine learning model, to create a system for predicting user tier transitions.**",
-    "ml_introduction_1.2": "Our machine learning model aims to classify users of our platform into two distinct categories: free tier users and paid tier users. By understanding user engagement metrics, the platform can better tailor its offerings and predict which users might be more likely to opt for premium features.",
+    "ml_introduction_1.2": "Our machine learning model aims to classify users of the platform into two distinct categories: free tier users and paid tier users. By understanding user engagement metrics, the platform can better tailor its offerings and predict which users might be more likely to opt for premium features.",
     "ml_introduction_1.3": "",
     "ml_introduction_1.4": "**Key Features and Advantages of Random Forest Classifier:**",
     "ml_introduction_1.5": "- **Ensemble of Decision Trees:** The Random Forest Classifier harnesses the strength of multiple decision trees, each trained on a different subset of the data. This aggregation of decisions results in a robust and resilient model capable of reducing overfitting and enhancing generalization.",
@@ -77,6 +80,5 @@
     "chatgpt_instructions_1.7": "- Click on the 'Create New Secret Key' button.",
     "chatgpt_instructions_1.8": "",
     "chatgpt_instructions_1.9": "You will be prompted to name your API key. You can name it anything you like, but it is a good idea to choose a name that will help you remember what the key is for.",
-    "chatgpt_instructions_1.10": "Once you have named your API key, click on the 'Create' button. Your API key will be generated and displayed.",
-    "chatgpt_instructions_1.11": "Once you have named your API key, click on the 'Create' button. Your API key will be generated and displayed."
+    "chatgpt_instructions_1.10": "Once you have named your API key, click on the 'Create' button. Your API key will be generated and displayed."
 }

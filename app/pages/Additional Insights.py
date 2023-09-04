@@ -30,22 +30,22 @@ col1_chart, col2_chart = st.columns(2, gap='large')
 
 col1_chart.plotly_chart(utils.get_purchases_onboarded_per_month(), use_container_width=True)
 col1_chart_expander = col1_chart.expander('See details:')
-col1_chart_expander.write(description['additional_insights_chart_1.1'])
-col1_chart_expander.write(description['additional_insights_chart_1.2'])
+
+for i in range(1, 4):
+    col1_chart_expander.write(description[f'additional_insights_chart_1.{i}'])
 
 col2_chart.plotly_chart(utils.get_student_and_purchase_type(), use_container_width=True)
 col2_chart_expander = col2_chart.expander('See details:')
-col2_chart_expander.write(description['additional_insights_chart_2.1'])
-col2_chart_expander.write(description['additional_insights_chart_2.2'])
+
+for i in range(1, 3):
+    col2_chart_expander.write(description[f'additional_insights_chart_2.{i}'])
 
 col3_chart, col4_chart = st.columns(2, gap='large')
 col3_chart.plotly_chart(utils.get_student_engagement_countries(), use_container_width=True)
 col3_chart_expander = col3_chart.expander('See details:')
-col3_chart_expander.write(description['additional_insights_chart_3.1'])
-col3_chart_expander.write(description['additional_insights_chart_3.2'])
-col3_chart_expander.write(description['additional_insights_chart_3.3'])
-col3_chart_expander.write(description['additional_insights_chart_3.4'])
-col3_chart_expander.write(description['additional_insights_chart_3.5'])
+
+for i in range(1, 7):
+    col3_chart_expander.write(description[f'additional_insights_chart_3.{i}'])
 
 col4_chart.plotly_chart(utils.get_hub_questions_asked_per_month(), use_container_width=True)
 col4_chart_expander = col4_chart.expander('See details:')
@@ -54,7 +54,6 @@ col4_chart_expander.write(description['additional_insights_chart_4.2'])
 
 st.write('')
 st.markdown('**Overall Conclusions:**')
-st.markdown(description['additional_insights_summary_1.1'])
-st.markdown(description['additional_insights_summary_1.2'])
-st.markdown(description['additional_insights_summary_1.3'])
-st.markdown(description['additional_insights_summary_1.4'])
+
+for i in range(1, 5):
+    st.markdown(description[f'additional_insights_summary_1.{i}'])
