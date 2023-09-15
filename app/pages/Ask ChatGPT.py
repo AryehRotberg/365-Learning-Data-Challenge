@@ -24,7 +24,7 @@ st.set_page_config(page_title='Ask ChatGPT',
 
 st.title('Ask ChatGPT 🤖')
 
-expander = st.expander('Introduction')
+expander = st.expander('Instructions')
 
 for i in range(1, 11):
     expander.markdown(description[f'chatgpt_instructions_1.{i}'])
