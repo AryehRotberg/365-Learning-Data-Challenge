@@ -13,7 +13,6 @@ This repository is the culmination of my participation in the "365 Learning Data
 6. Installation
 7. Usage
 8. Contributing
-9. License
 
 ## Datasets
 The project employs several datasets captured between January to October 2022 to provide a holistic view of the student behavior:
