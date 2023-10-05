@@ -22,36 +22,20 @@ class DataTransformation:
         self.ros = RandomOverSampler()
         self.rus = RandomUnderSampler()
         self.standard_scaler = StandardScaler()
-        self.minmax_scaler = MinMaxScaler()
     
-    def transform_data(self, scaler='standard', resampler='ros|rus'):
+    def transform_data(self):
         X = self.df.drop('paid', axis=1)
         y = self.df.paid
 
-        if resampler == 'ros|rus':
-            X_oversampled, y_oversampled = self.ros.fit_resample(X, y)
-            X_resampled, y_resampled = self.rus.fit_resample(X_oversampled, y_oversampled)
-        
-        if resampler == 'ros':
-            X_resampled, y_resampled = self.ros.fit_resample(X, y)
-        
-        if resampler == 'rus':
-            X_resampled, y_resampled = self.rus.fit_resample(X, y)
-        
-        if scaler is not None:
-            if scaler == 'standard':
-                X_resampled = self.standard_scaler.fit_transform(X_resampled)
-                
-                with open('outputs/standard_scaler.pickle', 'wb') as file:
-                    pickle.dump(self.standard_scaler, file, protocol=pickle.HIGHEST_PROTOCOL)
-            
-            if scaler == 'minmax':
-                X_resampled = self.minmax_scaler.fit_transform(X_resampled)
+        X_oversampled, y_oversampled = self.ros.fit_resample(X, y)
+        X_resampled, y_resampled = self.rus.fit_resample(X_oversampled, y_oversampled)
 
-                with open('outputs/minmax_scaler.pickle', 'wb') as file:
-                    pickle.dump(self.minmax_scaler, file, protocol=pickle.HIGHEST_PROTOCOL)
+        X_scaled = self.standard_scaler.fit_transform(X_resampled)
 
-        self.X_train, remaining_data, self.y_train, remaining_target = train_test_split(X_resampled, y_resampled, test_size=0.4)
+        with open('outputs/standard_scaler.pickle', 'wb') as file:
+            pickle.dump(self.standard_scaler, file, protocol=pickle.HIGHEST_PROTOCOL)
+
+        self.X_train, remaining_data, self.y_train, remaining_target = train_test_split(X_scaled, y_resampled, test_size=0.4)
         self.X_val, self.X_test, self.y_val, self.y_test = train_test_split(remaining_data, remaining_target, test_size=0.5)
 
     def to_csv(self, train_directory, val_directory, test_directory):

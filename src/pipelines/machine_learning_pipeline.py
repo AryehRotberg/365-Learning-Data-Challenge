@@ -7,11 +7,9 @@ from src.components.model_evaluation import ModelEvaluation
 
 
 # Logging Configuration
-logging.basicConfig(filename='logs/ml_pipeline_standardized_data.log',
+logging.basicConfig(filename='logs/ml_pipeline.log',
                     format='[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
-
-logging.info('Experiment - Used standardized data.\n')
 
 # Data Ingestion
 # ingestion = DataIngestion()
@@ -22,8 +20,7 @@ logging.info('Experiment - Used standardized data.\n')
 # Data Transformation
 transformation = DataTransformation()
 
-transformation.transform_data(scaler=None,
-                              resampler='ros|rus')
+transformation.transform_data()
 transformation.to_csv(train_directory='data/train',
                       val_directory='data/val',
                       test_directory='data/test')
