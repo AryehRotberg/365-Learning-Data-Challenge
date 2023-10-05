@@ -12,13 +12,11 @@ from sklearn.model_selection import cross_val_score
 class ModelTrainer:
     def __init__(self):
         self.X_train = pd.read_csv('data/train/X_train.csv').values
-        self.X_test = pd.read_csv('data/test/X_test.csv').values
         self.y_train = pd.read_csv('data/train/y_train.csv').values
-        self.y_test = pd.read_csv('data/test/y_test.csv').values
     
     def objective(self, trial: optuna.trial.Trial):
         name = trial.suggest_categorical('classifier', ['lr', 'rfc', 'knn'])
-
+        
         if name == 'lr':
             classifier = LogisticRegression(C=trial.suggest_float('C', 1, 4, log=True),
                                             solver=trial.suggest_categorical('solver', ['newton-cg', 'lbfgs', 'liblinear'])) # 150
@@ -60,4 +58,4 @@ class ModelTrainer:
 
         classifier.fit(self.X_train, self.y_train.ravel())
 
-        return classifier
+        return classifier, best_params

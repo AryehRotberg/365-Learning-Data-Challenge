@@ -9,20 +9,28 @@ from sklearn.metrics import classification_report, confusion_matrix, ConfusionMa
 
 
 class ModelEvaluation:
-    def __init__(self, classifier):
+    def __init__(self, classifier, study, val=False):
         self.classifier = classifier
+        self.val = val
 
         self.X_train = pd.read_csv('data/train/X_train.csv').values
-        self.X_test = pd.read_csv('data/test/X_test.csv').values
         self.y_train = pd.read_csv('data/train/y_train.csv').values
-        self.y_test = pd.read_csv('data/test/y_test.csv').values
+
+        if val:
+            self.X_test = pd.read_csv('data/val/X_val.csv').values
+            self.y_test = pd.read_csv('data/val/y_val.csv').values
+
+        if not val:
+            self.X_test = pd.read_csv('data/test/X_test.csv').values
+            self.y_test = pd.read_csv('data/test/y_test.csv').values
 
         self.y_pred = self.classifier.predict(self.X_test)
+        self.study = study
     
     def get_classification_report(self):
         return pd.DataFrame(classification_report(self.y_test, self.y_pred, output_dict=True)).transpose()
     
-    def get_confusion_matrix(self, plot=True):
+    def get_confusion_matrix(self, plot):
         self.confusion_matrix_plot = ConfusionMatrixDisplay.from_estimator(self.classifier, self.X_test, self.y_test)
         
         if plot:
