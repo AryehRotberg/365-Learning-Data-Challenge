@@ -12,10 +12,10 @@ logging.basicConfig(filename='logs/ml_pipeline.log',
                     level=logging.INFO)
 
 # Data Ingestion
-# ingestion = DataIngestion()
+ingestion = DataIngestion()
 
-# ingestion.prepare_dataframe()
-# ingestion.to_csv('data/processed/ml_dataset.csv')
+ingestion.prepare_dataframe()
+ingestion.to_csv('data/processed/ml_dataset.csv')
 
 # Data Transformation
 transformation = DataTransformation()
