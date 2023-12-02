@@ -8,8 +8,7 @@ from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe
 from langchain.callbacks import StreamlitCallbackHandler
 from langchain.chat_models import ChatOpenAI
 
-from openai.error import RateLimitError
-from openai.error import AuthenticationError
+from openai import AuthenticationError, RateLimitError
 from langchain.schema.output_parser import OutputParserException
 
 
