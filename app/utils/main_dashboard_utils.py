@@ -193,13 +193,13 @@ class main_dashboard_utils:
         fig.add_trace(go.Bar(x=monthly_average_minutes_watched.month,
                              y=monthly_average_minutes_watched.minutes_watched,
                              name='Minutes Watched',
-                             offsetgroup=1,
+                             legendgroup=1,
                              marker_color=colors), secondary_y=False)
                 
         fig.add_trace(go.Scatter(x=monthly_average_minutes_watched.month,
                                  y=monthly_average_minutes_watched.average_minutes_watched,
                                  name='Average Minutes Watched',
-                                 offsetgroup=2,
+                                 legendgroup=2,
                                  marker_color='green',
                                  mode='markers+lines'), secondary_y=True)
 
